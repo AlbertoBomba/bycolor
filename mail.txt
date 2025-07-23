@@ -1,0 +1,7 @@
+contraseña Altare_1982
+correo att@bycolor.es
+
+Server 	Dirección de servidor 	Port
+POP3 (entrada, SSL/TLS) 	pop3.strato.com 	995
+IMAP (entrada, SSL/TLS) 	imap.strato.com 	993
+SMTP (salida, SSL/TLS) 		smtp.strato.com 	465 / 587 

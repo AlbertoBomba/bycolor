@@ -1,2 +1,76 @@
+# Robots.txt para bycolor.es
+# Diseño web personalizado en España
+
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemaps
+Sitemap: https://bycolor.es/sitemap.xml
+
+# Páginas principales permitidas
+Allow: /
+Allow: /#servicios
+Allow: /#casos
+Allow: /#paquetes
+Allow: /#faq
+Allow: /#contacto
+
+# Servicios específicos (futuras páginas)
+Allow: /servicios/
+Allow: /paquetes/
+Allow: /casos-exito/
+Allow: /blog/
+
+# Archivos de recursos permitidos
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /fonts/
+
+# Páginas legales permitidas
+Allow: /politica-privacidad
+Allow: /terminos-condiciones
+Allow: /aviso-legal
+
+# Archivos que no queremos indexar
+Disallow: /admin/
+Disallow: /storage/
+Disallow: /vendor/
+Disallow: /node_modules/
+Disallow: /config/
+Disallow: /database/
+Disallow: /tests/
+Disallow: /.env
+Disallow: /.git/
+Disallow: /composer.json
+Disallow: /composer.lock
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /artisan
+Disallow: /phpunit.xml
+Disallow: /vite.config.js
+
+# Archivos temporales y de desarrollo
+Disallow: /tmp/
+Disallow: /temp/
+Disallow: /cache/
+Disallow: /logs/
+Disallow: /*.log
+Disallow: /*.tmp
+
+# Configuraciones específicas para bots
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# Información de contacto para webmasters
+# Email: att@bycolor.es
+# Sitio web: https://bycolor.es

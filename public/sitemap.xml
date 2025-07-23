@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    
+    <!-- Página Principal -->
+    <url>
+        <loc>https://bycolor.es/</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/" />
+        <image:image>
+            <image:loc>https://bycolor.es/images/casos-exito/cdpuebla.jpg</image:loc>
+            <image:title>CD Puebla - Sistema de gestión deportiva desarrollado por bycolor.es</image:title>
+            <image:caption>Caso de éxito: Sistema SaaS + Landing para escuela deportiva con +20% inscripciones</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Sección Desarrollo Web / Servicios -->
+    <url>
+        <loc>https://bycolor.es/#desarrollo-web</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/#desarrollo-web" />
+    </url>
+    
+    <!-- Sección Casos de Éxito / Clientes -->
+    <url>
+        <loc>https://bycolor.es/#clientes-desarrollo-web</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/#clientes-desarrollo-web" />
+        <image:image>
+            <image:loc>https://bycolor.es/images/casos-exito/cdpuebla.jpg</image:loc>
+            <image:title>CD Puebla - Sistema de gestión deportiva SaaS</image:title>
+            <image:caption>Caso de éxito: Sistema SaaS para gestión de matrículas deportivas con más de 1200 alumnos gestionados</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Sección Paquetes / Precios -->
+    <url>
+        <loc>https://bycolor.es/#precio-pagina-web</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/#precio-pagina-web" />
+    </url>
+    
+    <!-- Sección FAQ / Preguntas Frecuentes -->
+    <url>
+        <loc>https://bycolor.es/#preguntas-desarrollo-web</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/#preguntas-desarrollo-web" />
+    </url>
+    
+    <!-- Sección Contacto / Presupuestos -->
+    <url>
+        <loc>https://bycolor.es/#presupuestos-pagina-web</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/#presupuestos-pagina-web" />
+    </url>
+    <!-- Sección Contacto / Presupuestos -->
+    <url>
+        <loc>https://bycolor.es/#presupuestos-pagina-web</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/#presupuestos-pagina-web" />
+    </url>
+    
+    <!-- Páginas de Landing Específicas -->
+    <url>
+        <loc>https://bycolor.es/tailwind-landing</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/tailwind-landing" />
+    </url>
+    
+    <!-- Páginas de Servicio Específicas para SEO -->
+    <url>
+        <loc>https://bycolor.es/desarrollo-web-madrid</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/desarrollo-web-madrid" />
+    </url>
+    
+    <url>
+        <loc>https://bycolor.es/paginas-web-profesionales</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/paginas-web-profesionales" />
+    </url>
+    
+    <url>
+        <loc>https://bycolor.es/tiendas-online</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/tiendas-online" />
+    </url>
+    
+    <url>
+        <loc>https://bycolor.es/sistema-reservas-citas</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/sistema-reservas-citas" />
+    </url>
+    
+    <!-- Páginas de Paquetes Individuales -->
+    <url>
+        <loc>https://bycolor.es/paquetes/starter</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/paquetes/starter" />
+    </url>
+    
+    <url>
+        <loc>https://bycolor.es/paquetes/pro</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/paquetes/pro" />
+    </url>
+    
+    <url>
+        <loc>https://bycolor.es/paquetes/enterprise</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/paquetes/enterprise" />
+    </url>
+    
+    <!-- Casos de Éxito Detallados -->
+    <url>
+        <loc>https://bycolor.es/casos-exito/cd-puebla</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/casos-exito/cd-puebla" />
+        <image:image>
+            <image:loc>https://bycolor.es/images/casos-exito/cdpuebla.jpg</image:loc>
+            <image:title>CD Puebla - Sistema SaaS para gestión deportiva</image:title>
+            <image:caption>Sistema completo de gestión de matrículas, inscripciones y cobros para escuela deportiva</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Blog (Future Content) -->
+    <url>
+        <loc>https://bycolor.es/blog</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/blog" />
+    </url>
+    
+    <url>
+        <loc>https://bycolor.es/blog/como-aumentar-ventas-web</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/blog/como-aumentar-ventas-web" />
+    </url>
+    
+    <url>
+        <loc>https://bycolor.es/blog/seo-local-madrid</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/blog/seo-local-madrid" />
+    </url>
+    
+    <url>
+        <loc>https://bycolor.es/blog/desarrollo-web-personalizado</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/blog/desarrollo-web-personalizado" />
+    </url>
+    
+    <!-- Páginas Legales -->
+    <url>
+        <loc>https://bycolor.es/politica-privacidad</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/politica-privacidad" />
+    </url>
+    
+    <url>
+        <loc>https://bycolor.es/terminos-condiciones</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/terminos-condiciones" />
+    </url>
+    
+    <url>
+        <loc>https://bycolor.es/aviso-legal</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/aviso-legal" />
+    </url>
+    
+    <url>
+        <loc>https://bycolor.es/cookies</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/cookies" />
+    </url>
+    
+    <!-- Sitemap HTML para usuarios -->
+    <url>
+        <loc>https://bycolor.es/sitemap.html</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/sitemap.html" />
+    </url>
+
+</urlset>

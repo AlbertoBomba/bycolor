@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa del Sitio - bycolor.es</title>
+    <meta name="description" content="Mapa del sitio web de bycolor.es - Navegación completa de todas nuestras páginas y servicios">
+    <meta name="robots" content="index, follow">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: white;
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+        
+        .logo span:nth-child(1) { color: #ff4757; }
+        .logo span:nth-child(2) { color: #3742fa; }
+        .logo span:nth-child(3) { color: #2ed573; }
+        .logo span:nth-child(4) { color: #a55eea; }
+        
+        .sitemap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .sitemap-section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .sitemap-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .section-title .emoji {
+            font-size: 2rem;
+        }
+        
+        .section-links {
+            list-style: none;
+        }
+        
+        .section-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .section-links a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .section-links a:hover {
+            color: #e74c3c;
+        }
+        
+        .section-links a::before {
+            content: "→";
+            font-weight: bold;
+        }
+        
+        .priority-high { border-left: 5px solid #e74c3c; }
+        .priority-medium { border-left: 5px solid #f39c12; }
+        .priority-low { border-left: 5px solid #95a5a6; }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            font-size: 0.9rem;
+            margin-top: 3rem;
+        }
+        
+        .back-to-home {
+            display: inline-block;
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            margin: 2rem 0;
+            transition: transform 0.3s ease;
+        }
+        
+        .back-to-home:hover {
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+            
+            .sitemap-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <span>by</span><span>co</span><span>lor</span><span>.es</span>
+            </div>
+            <h1>📍 Mapa del Sitio</h1>
+            <p>Navegación completa de nuestra web de diseño y desarrollo</p>
+        </header>
+
+        <div class="sitemap-grid">
+            <!-- Páginas Principales -->
+            <section class="sitemap-section priority-high">
+                <h2 class="section-title">
+                    <span class="emoji">🏠</span>
+                    Páginas Principales
+                </h2>
+                <ul class="section-links">
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/#servicios">Servicios</a></li>
+                    <li><a href="/#casos">Casos de Éxito</a></li>
+                    <li><a href="/#paquetes">Paquetes</a></li>
+                    <li><a href="/#faq">Preguntas Frecuentes</a></li>
+                    <li><a href="/#contacto">Contacto</a></li>
+                </ul>
+            </section>
+
+            <!-- Servicios -->
+            <section class="sitemap-section priority-high">
+                <h2 class="section-title">
+                    <span class="emoji">⚡</span>
+                    Servicios
+                </h2>
+                <ul class="section-links">
+                    <li><a href="/servicios/desarrollo-web">Desarrollo Web</a></li>
+                    <li><a href="/servicios/tiendas-online">Tiendas Online</a></li>
+                    <li><a href="/servicios/seo">SEO y Posicionamiento</a></li>
+                    <li><a href="/#tecnologias">Tecnologías</a></li>
+                </ul>
+            </section>
+
+            <!-- Paquetes -->
+            <section class="sitemap-section priority-high">
+                <h2 class="section-title">
+                    <span class="emoji">📦</span>
+                    Paquetes
+                </h2>
+                <ul class="section-links">
+                    <li><a href="/paquetes/starter">Starter - 450€</a></li>
+                    <li><a href="/paquetes/pro">Pro - 950€</a></li>
+                    <li><a href="/paquetes/enterprise">Enterprise - 1.300€</a></li>
+                </ul>
+            </section>
+
+            <!-- Casos de Éxito -->
+            <section class="sitemap-section priority-medium">
+                <h2 class="section-title">
+                    <span class="emoji">🎯</span>
+                    Casos de Éxito
+                </h2>
+                <ul class="section-links">
+                    <li><a href="/#casos">Todos los Casos</a></li>
+                    <li><a href="/casos-exito/cd-puebla">CD Puebla - SaaS Deportivo</a></li>
+                    <li><a href="https://cdpuebla.es" target="_blank">Ver CD Puebla en Vivo</a></li>
+                </ul>
+            </section>
+
+            <!-- Blog (Recomendado) -->
+            <section class="sitemap-section priority-medium">
+                <h2 class="section-title">
+                    <span class="emoji">📝</span>
+                    Blog y Recursos
+                </h2>
+                <ul class="section-links">
+                    <li><a href="/blog">Blog Principal</a></li>
+                    <li><a href="/blog/desarrollo-web">Desarrollo Web</a></li>
+                    <li><a href="/blog/seo-tips">Tips de SEO</a></li>
+                    <li><a href="/blog/casos-exito">Casos de Éxito</a></li>
+                </ul>
+            </section>
+
+            <!-- Contacto -->
+            <section class="sitemap-section priority-high">
+                <h2 class="section-title">
+                    <span class="emoji">📞</span>
+                    Contacto
+                </h2>
+                <ul class="section-links">
+                    <li><a href="/#contacto">Formulario de Contacto</a></li>
+                    <li><a href="mailto:att@bycolor.es">Email: att@bycolor.es</a></li>
+                    <li><a href="https://wa.me/34600646123" target="_blank">WhatsApp</a></li>
+                </ul>
+            </section>
+
+            <!-- Páginas Legales -->
+            <section class="sitemap-section priority-low">
+                <h2 class="section-title">
+                    <span class="emoji">⚖️</span>
+                    Información Legal
+                </h2>
+                <ul class="section-links">
+                    <li><a href="/politica-privacidad">Política de Privacidad</a></li>
+                    <li><a href="/terminos-condiciones">Términos y Condiciones</a></li>
+                    <li><a href="/aviso-legal">Aviso Legal</a></li>
+                    <li><a href="/cookies">Política de Cookies</a></li>
+                </ul>
+            </section>
+
+            <!-- Herramientas -->
+            <section class="sitemap-section priority-medium">
+                <h2 class="section-title">
+                    <span class="emoji">🛠️</span>
+                    Herramientas
+                </h2>
+                <ul class="section-links">
+                    <li><a href="/sitemap.xml">Sitemap XML</a></li>
+                    <li><a href="/robots.txt">Robots.txt</a></li>
+                    <li><a href="/#tecnologias">Stack Tecnológico</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="footer">
+            <a href="/" class="back-to-home">🏠 Volver al Inicio</a>
+            <p>© 2024 bycolor.es - Webs que convierten visitantes en clientes</p>
+            <p>Última actualización: Enero 2024</p>
+        </div>
+    </div>
+</body>
+</html>
