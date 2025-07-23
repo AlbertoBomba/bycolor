@@ -1,0 +1,182 @@
+/* Tailwind Landing Page Custom Styles */
+
+/* Alpine.js cloak utility */
+[x-cloak]:not(button) { 
+    display: none !important; 
+}
+
+/* Form input styles */
+.form-input, .form-select, .form-textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-textarea {
+    min-height: 8rem;
+    resize: vertical;
+}
+
+/* Submit button styles */
+.btn-submit {
+    width: 100%;
+    background: linear-gradient(to right, #ef4444, #8b5cf6);
+    color: white;
+    padding: 1rem 1.5rem;
+    font-size: 1.125rem;
+    font-weight: 800;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    transform: rotate(-1deg);
+}
+
+.btn-submit:hover {
+    transform: rotate(0deg) scale(1.05);
+    background: linear-gradient(to right, #dc2626, #7c3aed);
+}
+
+.btn-submit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* WhatsApp float button styles */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+/* Animation utilities */
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin-slow {
+    animation: spin-slow 20s linear infinite;
+}
+
+@keyframes pulse-brutal {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.animate-pulse-brutal {
+    animation: pulse-brutal 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Text size utilities for extra large text */
+.text-enormous {
+    font-size: 8rem;
+    line-height: 1;
+}
+
+.text-insane {
+    font-size: 12rem;
+    line-height: 1;
+}
+
+.text-mega {
+    font-size: 6rem;
+    line-height: 1;
+}
+
+.text-brutal {
+    font-size: 10rem;
+    line-height: 1;
+}
+
+.text-massive {
+    font-size: 4rem;
+    line-height: 1;
+}
+
+.text-huge {
+    font-size: 5rem;
+    line-height: 1;
+}
+
+.text-ultra {
+    font-size: 8rem;
+    line-height: 1;
+}
+
+/* Glitch effect */
+.glitch {
+    position: relative;
+}
+
+/* Shadow effects */
+.brutal-shadow {
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive text sizes */
+@media (max-width: 640px) {
+    .text-enormous {
+        font-size: 4rem;
+    }
+    
+    .text-insane {
+        font-size: 6rem;
+    }
+    
+    .text-mega {
+        font-size: 3rem;
+    }
+    
+    .text-brutal {
+        font-size: 5rem;
+    }
+    
+    .text-massive {
+        font-size: 2rem;
+    }
+    
+    .text-huge {
+        font-size: 2.5rem;
+    }
+    
+    .text-ultra {
+        font-size: 4rem;
+    }
+}

@@ -8,8 +8,10 @@ export default defineConfig({
             input: [
                 'resources/css/app.css', 
                 'resources/css/landing.css', 
+                'resources/css/tailwind-landing-styles.css',
                 'resources/js/app.js',
-                'resources/js/landing.js'
+                'resources/js/landing.js',
+                'resources/js/tailwind-landing.js'
             ],
             refresh: true,
         }),

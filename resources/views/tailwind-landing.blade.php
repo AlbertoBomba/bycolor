@@ -9,61 +9,23 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://bycolor.es/diseño-web-en-toledo">
-    @vite(['resources/css/app.css', 'resources/css/landing.css', 'resources/js/app.js', 'resources/js/landing.js'])
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://bycolor.es/sitemap.xml">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon/16_16.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon/32_32.png') }}">
+    <link rel="icon" type="image/png" sizes="64x64" href="{{ asset('images/favicon/64_64.png') }}">
+    <link rel="shortcut icon" href="{{ asset('images/favicon/32_32.png') }}">
+    
+    @vite(['resources/css/app.css', 'resources/css/landing.css', 'resources/css/tailwind-landing-styles.css', 'resources/js/app.js', 'resources/js/landing.js', 'resources/js/tailwind-landing.js'])
     
     <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     
-    <style>
-        [x-cloak]:not(button) { display: none !important; }
-        
-        .form-input, .form-select, .form-textarea {
-            width: 100%;
-            padding: 0.75rem 1rem;
-            border: 2px solid #e5e7eb;
-            border-radius: 0.5rem;
-            font-size: 1rem;
-            font-weight: 500;
-            background-color: white;
-            transition: all 0.2s ease-in-out;
-        }
-        
-        .form-input:focus, .form-select:focus, .form-textarea:focus {
-            outline: none;
-            border-color: #3b82f6;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-        }
-        
-        .form-textarea {
-            min-height: 8rem;
-            resize: vertical;
-        }
-        
-        .btn-submit {
-            width: 100%;
-            background: linear-gradient(to right, #ef4444, #8b5cf6);
-            color: white;
-            padding: 1rem 1.5rem;
-            font-size: 1.125rem;
-            font-weight: 800;
-            border-radius: 9999px;
-            border: none;
-            cursor: pointer;
-            transition: all 0.2s ease-in-out;
-            transform: rotate(-1deg);
-        }
-        
-        .btn-submit:hover {
-            transform: rotate(0deg) scale(1.05);
-            background: linear-gradient(to right, #dc2626, #7c3aed);
-        }
-        
-        .btn-submit:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-            transform: none;
-        }
-    </style>
+    <!-- Contact route for JavaScript -->
+    <script>
+        window.contactRoute = '{{ route("contacto.enviar") }}';
+    </script>
 </head>
 <body class="bg-white overflow-x-hidden">
     <!-- WhatsApp Float Button -->
@@ -73,7 +35,6 @@
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.531 3.485"/>
         </svg>
     </a>
-
     <!-- Navigation Menu -->
     <nav class="fixed top-0 w-full bg-black/95 backdrop-blur-sm z-50 shadow-lg border-b border-gray-800">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
@@ -905,241 +866,5 @@
             </div>
         </div>
     </footer>
-
-    <!-- Script para el formulario de contacto con Alpine.js -->
-    <script>
-        function contactForm() {
-            return {
-                loading: false,
-                message: '',
-                messageType: '',
-                errors: {},
-                formData: {
-                    nombre: '',
-                    telefono: '',
-                    email: '',
-                    paquete: '',
-                    mensaje: ''
-                },
-                
-                init() {
-                    // Marcar que Alpine.js está manejando el formulario
-                    window.alpineFormActive = true;
-                    console.log('ContactForm inicializado con Alpine.js, loading:', this.loading);
-                    console.log('Mensaje inicial:', this.message);
-                    console.log('MessageType inicial:', this.messageType);
-                },
-                
-                async submitForm() {
-                    console.log('submitForm llamado, loading antes:', this.loading);
-                    
-                    // Prevenir envíos múltiples con flag global
-                    if (this.loading || window.formSubmitting) {
-                        console.log('Ya está enviando, ignorando...');
-                        return;
-                    }
-                    
-                    // Establecer flag global
-                    window.formSubmitting = true;
-                    this.loading = true;
-                    this.message = '';
-                    this.errors = {};
-                    
-                    console.log('Estado loading establecido a true:', this.loading);
-                    
-                    try {
-                        // Verificar que tenemos el token CSRF
-                        const csrfToken = document.querySelector('meta[name="csrf-token"]');
-                        if (!csrfToken) {
-                            throw new Error('Token CSRF no encontrado');
-                        }
-                        
-                        const formData = new FormData();
-                        formData.append('_token', csrfToken.getAttribute('content'));
-                        formData.append('nombre', this.formData.nombre);
-                        formData.append('telefono', this.formData.telefono);
-                        formData.append('email', this.formData.email);
-                        formData.append('paquete', this.formData.paquete);
-                        formData.append('mensaje', this.formData.mensaje);
-                        
-                        console.log('Enviando formulario...');
-                        
-                        const response = await fetch('{{ route("contacto.enviar") }}', {
-                            method: 'POST',
-                            body: formData,
-                            headers: {
-                                'X-Requested-With': 'XMLHttpRequest',
-                                'Accept': 'application/json',
-                            }
-                        });
-                        
-                        console.log('Respuesta recibida:', response.status);
-                        
-                        // Intentar parsear la respuesta como JSON
-                        let data;
-                        try {
-                            const responseText = await response.text();
-                            console.log('Texto de respuesta:', responseText);
-                            data = JSON.parse(responseText);
-                        } catch (parseError) {
-                            console.error('Error parseando JSON:', parseError);
-                            throw new Error('Respuesta del servidor no válida');
-                        }
-                        
-                        console.log('Datos parseados:', data);
-                        
-                        if (response.ok && data.success) {
-                            this.message = data.message || '¡Mensaje enviado correctamente! Te contactaremos pronto.';
-                            this.messageType = 'success';
-                            this.errors = {}; // Limpiar errores
-                            
-                            console.log('Éxito - mensaje establecido:', this.message);
-                            console.log('Tipo de mensaje:', this.messageType);
-                            
-                            // Limpiar formulario
-                            this.formData = {
-                                nombre: '',
-                                telefono: '',
-                                email: '',
-                                paquete: '',
-                                mensaje: ''
-                            };
-                            
-                            // Scroll suave al mensaje después de un breve delay
-                            setTimeout(() => {
-                                const messageEl = document.querySelector('[x-show="message && message.length > 0"]');
-                                if (messageEl && messageEl.style.display !== 'none') {
-                                    messageEl.scrollIntoView({ 
-                                        behavior: 'smooth', 
-                                        block: 'center' 
-                                    });
-                                }
-                            }, 200);
-                            
-                        } else {
-                            if (data.errors) {
-                                this.errors = data.errors;
-                                this.message = 'Por favor, corrige los errores en el formulario.';
-                                console.log('Errores de validación:', data.errors);
-                            } else {
-                                this.message = data.message || 'Hubo un error al enviar el mensaje. Inténtalo de nuevo.';
-                            }
-                            this.messageType = 'error';
-                            console.log('Error - mensaje establecido:', this.message);
-                        }
-                        
-                    } catch (error) {
-                        console.error('Error completo:', error);
-                        this.message = 'Error de conexión. Por favor, inténtalo de nuevo.';
-                        this.messageType = 'error';
-                    } finally {
-                        // Limpiar flags
-                        this.loading = false;
-                        window.formSubmitting = false;
-                        console.log('Estado loading restablecido a false:', this.loading);
-                        console.log('Mensaje final:', this.message);
-                        console.log('MessageType final:', this.messageType);
-                        
-                        // Auto-ocultar mensaje después de 8 segundos si es éxito
-                        if (this.messageType === 'success' && this.message) {
-                            setTimeout(() => {
-                                console.log('Auto-ocultando mensaje de éxito');
-                                this.message = '';
-                                this.messageType = '';
-                            }, 8000);
-                        }
-                    }
-                }
-            }
-        }
-        
-        // Función para el menú móvil (si no está ya definida)
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-        }
-        
-        // Backup JavaScript vanilla para el formulario (solo si Alpine.js no está disponible)
-        document.addEventListener('DOMContentLoaded', function() {
-            // Esperar un poco para que Alpine.js se inicialice
-            setTimeout(() => {
-                // Verificar si Alpine.js está manejando el formulario
-                if (window.alpineFormActive || typeof window.Alpine !== 'undefined') {
-                    console.log('Alpine.js detectado y activo, usando Alpine.js para el formulario');
-                    return;
-                }
-                
-                console.log('Alpine.js no detectado, usando JavaScript vanilla como respaldo');
-                
-                const form = document.getElementById('contactoForm');
-                const submitBtn = document.getElementById('submitBtn');
-                const submitText = document.getElementById('submitText');
-                const loadingText = document.getElementById('loadingText');
-                const messageContainer = document.getElementById('messageContainer');
-                const messageText = document.getElementById('messageText');
-                
-                if (form) {
-                    form.addEventListener('submit', async function(e) {
-                        e.preventDefault();
-                        
-                        console.log('Formulario enviado con JavaScript vanilla (respaldo)');
-                    
-                    // Mostrar loading
-                    submitBtn.disabled = true;
-                    submitText.style.display = 'none';
-                    loadingText.style.display = 'flex';
-                    
-                    try {
-                        const formData = new FormData(form);
-                        const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-                        formData.append('_token', csrfToken);
-                        
-                        const response = await fetch('{{ route("contacto.enviar") }}', {
-                            method: 'POST',
-                            body: formData,
-                            headers: {
-                                'X-Requested-With': 'XMLHttpRequest',
-                                'Accept': 'application/json',
-                            }
-                        });
-                        
-                        const data = await response.json();
-                        console.log('Respuesta recibida:', data);
-                        
-                        if (response.ok && data.success) {
-                            // Mostrar mensaje de éxito
-                            messageText.textContent = data.message || '¡Mensaje enviado correctamente! Te contactaremos pronto.';
-                            messageContainer.className = 'px-4 py-3 rounded-lg mb-4 sm:mb-6 text-sm sm:text-base border bg-green-100 border-green-400 text-green-700';
-                            messageContainer.style.display = 'block';
-                            
-                            // Limpiar formulario
-                            form.reset();
-                            
-                            // Scroll al mensaje
-                            messageContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                            
-                        } else {
-                            // Mostrar mensaje de error
-                            messageText.textContent = data.message || 'Hubo un error al enviar el mensaje.';
-                            messageContainer.className = 'px-4 py-3 rounded-lg mb-4 sm:mb-6 text-sm sm:text-base border bg-red-100 border-red-400 text-red-700';
-                            messageContainer.style.display = 'block';
-                        }
-                        
-                    } catch (error) {
-                        console.error('Error:', error);
-                        messageText.textContent = 'Error de conexión. Por favor, inténtalo de nuevo.';
-                        messageContainer.className = 'px-4 py-3 rounded-lg mb-4 sm:mb-6 text-sm sm:text-base border bg-red-100 border-red-400 text-red-700';
-                        messageContainer.style.display = 'block';
-                    } finally {
-                        // Restaurar botón
-                        submitBtn.disabled = false;
-                        submitText.style.display = 'inline';
-                        loadingText.style.display = 'none';
-                    }
-                });
-            }
-            }, 100); // Delay para que Alpine.js se inicialice
-        });
-    </script>
 </body>
 </html>
