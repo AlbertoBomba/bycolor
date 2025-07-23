@@ -3,13 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Language" content="es">
-    <meta name="language" content="Spanish">
-    <title>BC.ES - Páginas WEB únicas (de 0 a 100 )</title>
-    <meta name="description" content="Creamos páginas web personalizadas y únicas en Toledo. Desarrollo web profesional, SEO optimizado y diseños que convierten visitantes en clientes.">
-    <meta name="keywords" content="Diseño Web Toledo, Desarrollo Web toledo, Páginas Web personalizadas toledo, SEO España, diseño web responsive">
-     <meta name="author" content="bycolor.es">
+    <title>Diseño Web en Toledo - Webs Personalizadas | bycolor.es</title>
+    <meta name="description" content="Diseño web profesional en Toledo. Creamos páginas web personalizadas, tiendas online y sistemas únicos. ¡100% personalizados, sin plantillas! Contacta ahora."><meta name="keywords" content="diseño web Toledo, páginas web Toledo, desarrollo web personalizado Toledo, tiendas online Toledo, SEO Toledo, diseñador web Toledo">
+    <meta name="author" content="bycolor.es">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://bycolor.es/diseño-web-en-toledo">
     @vite(['resources/css/app.css', 'resources/css/landing.css', 'resources/js/app.js', 'resources/js/landing.js'])
+    
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <style>
+        [x-cloak]:not(button) { display: none !important; }
+        
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 500;
+            background-color: white;
+            transition: all 0.2s ease-in-out;
+        }
+        
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        .form-textarea {
+            min-height: 8rem;
+            resize: vertical;
+        }
+        
+        .btn-submit {
+            width: 100%;
+            background: linear-gradient(to right, #ef4444, #8b5cf6);
+            color: white;
+            padding: 1rem 1.5rem;
+            font-size: 1.125rem;
+            font-weight: 800;
+            border-radius: 9999px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            transform: rotate(-1deg);
+        }
+        
+        .btn-submit:hover {
+            transform: rotate(0deg) scale(1.05);
+            background: linear-gradient(to right, #dc2626, #7c3aed);
+        }
+        
+        .btn-submit:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+    </style>
 </head>
 <body class="bg-white overflow-x-hidden">
     <!-- WhatsApp Float Button -->
@@ -75,17 +129,16 @@
         
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20">
             <h1 class="text-3xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-insane font-black mb-6 sm:mb-8 transform -skew-x-6 glitch drop-shadow-xl leading-none">
-                <span class="text-red-600">Desarrollo</span> <span class="text-blue-600">WEB</span> <span class="text-green-600">personalizada</span>
+                <span class="text-red-600">Desarrollo</span> <span class="text-blue-600">WEB en</span> <span class="text-green-600">TOLEDO</span>
             </h1>
-            <h2 class="text-2xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-mega font-black text-purple-600 mb-8 sm:mb-12 transform skew-x-3 rotate-1 animate-pulse-brutal drop-shadow-lg leading-none">
-                ¡ÚNICA!
-            </h2>
-            
+            <div class="text-2xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-mega font-black text-purple-600 mb-8 sm:mb-12 transform skew-x-3 rotate-1 animate-pulse-brutal drop-shadow-lg leading-none">
+                ¡SOMOS ÚNICOS!
+            </div>
             <p class="text-base sm:text-lg md:text-2xl lg:text-3xl text-white font-light mb-6 sm:mb-8 max-w-full sm:max-w-4xl mx-auto leading-relaxed bg-white/10 backdrop-blur-sm p-4 sm:p-6 rounded-2xl shadow-lg border border-white/20">
-                No usamos plantillas. Nuestro <span class="font-black text-red-400 text-lg sm:text-xl md:text-3xl lg:text-5xl">desarrollo web es personalizado</span> 
+                No usamos plantillas. Nuestro <span class="font-black text-red-400 text-lg sm:text-xl md:text-3xl lg:text-5xl">Desarrollo web en toledo personalizado</span> 
                 100%. Manteniendo la premisa de que cada cliente es único.
             </p>
-            
+
             <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mt-8 sm:mt-16">
                 <a href="#contacto" class="bg-gradient-to-r from-red-500 to-pink-500 text-white px-6 sm:px-8 md:px-12 lg:px-16 py-3 sm:py-4 md:py-6 lg:py-8 text-base sm:text-lg md:text-2xl lg:text-4xl font-black transform -rotate-3 hover:rotate-0 hover:scale-110 transition-all shadow-2xl rounded-full backdrop-blur-sm border-2 border-white/20 w-full sm:w-auto text-center">
                     ¡QUIERO TRABAJAR CON VOSOTROS!
@@ -111,14 +164,14 @@
         <div class="absolute top-0 right-0 text-6xl sm:text-8xl lg:text-brutal font-black text-red-50 transform rotate-45 opacity-20 hidden md:block">
             SERVICIOS
         </div>
-        
+        {{-- Diseño Web en Toledo --}}
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 sm:mb-16 lg:mb-20">
                 <h2 class="text-4xl sm:text-7xl md:text-9xl lg:text-[12rem] xl:text-[15rem] font-black mb-6 sm:mb-8 transform -rotate-3 brutal-shadow leading-none">
                     <span class="text-red-600">LO</span> <span class="text-blue-600">QUE</span> <span class="text-green-600">HACEMOS</span>
                 </h2>
                 <p class="text-xs sm:text-sm md:text-lg lg:text-2xl text-gray-700 max-w-full sm:max-w-4xl mx-auto px-4 font-bold">
-                    Nuestro objetivo es crear webs personalizadas para nuestro cliente, porque cada cliente tiene sus necesidades. 
+                    Nuestro objetivo es el diseño web en toledo personalizado para nuestro cliente, porque cada cliente tiene sus necesidades. 
                     Todas nuestras páginas webs están diseñadas con la estructura SEO y UX en mente, facilitando la navegación y mejorando la experiencia del usuario.
                 </p>
                     <span class="font-black text-red-500 text-lg sm:text-xl md:text-3xl lg:text-5xl">AUMENTAR</span> tus ventas y 
@@ -697,36 +750,51 @@
                 </div>
 
                 <!-- Formulario de contacto -->
-                <div class="bg-white p-6 sm:p-8 rounded-3xl shadow-2xl transform rotate-1 hover:rotate-0 transition-all order-1 lg:order-2">
+                <div class="bg-white p-6 sm:p-8 rounded-3xl shadow-2xl transform rotate-1 hover:rotate-0 transition-all order-1 lg:order-2" 
+                     x-data="contactForm()" x-init="init()" id="contactForm">
                     <h3 class="text-2xl sm:text-3xl font-black text-gray-800 mb-4 sm:mb-6 text-center">CUÉNTANOS TU PROYECTO</h3>
                     
+                    <!-- Mensaje de éxito/error dinámico -->
+                    <div id="messageContainer" style="display: none;" class="px-4 py-3 rounded-lg mb-4 sm:mb-6 text-sm sm:text-base border">
+                        <span id="messageText"></span>
+                    </div>
+                    
+                    <div x-show="message && message.length > 0" 
+                         :class="messageType === 'success' ? 'bg-green-100 border-green-400 text-green-700' : 'bg-red-100 border-red-400 text-red-700'"
+                         class="px-4 py-3 rounded-lg mb-4 sm:mb-6 text-sm sm:text-base border"
+                         x-transition:enter="transition ease-out duration-300"
+                         x-transition:enter-start="opacity-0 transform scale-95"
+                         x-transition:enter-end="opacity-100 transform scale-100"
+                         x-transition:leave="transition ease-in duration-200"
+                         x-transition:leave-start="opacity-100 transform scale-100"
+                         x-transition:leave-end="opacity-0 transform scale-95"
+                         style="display: none;">
+                        <span x-text="message"></span>
+                    </div>
+
                     @if(session('success'))
                         <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg mb-4 sm:mb-6 text-sm sm:text-base">
                             {{ session('success') }}
                         </div>
                     @endif
 
-                    <form action="{{ route('contacto.enviar') }}" method="POST" class="space-y-4 sm:space-y-6">
+                    <form id="contactoForm" @submit.prevent="submitForm" class="space-y-4 sm:space-y-6">
                         @csrf
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                             <div>
                                 <label for="nombre" class="block text-xs sm:text-sm font-bold text-gray-700 mb-1 sm:mb-2">NOMBRE *</label>
                                 <input type="text" id="nombre" name="nombre" required
                                     class="form-input"
-                                    value="{{ old('nombre') }}">
-                                @error('nombre')
-                                    <p class="text-red-500 text-xs sm:text-sm mt-1">{{ $message }}</p>
-                                @enderror
+                                    x-model="formData.nombre">
+                                <p x-show="errors.nombre" x-text="errors.nombre" class="text-red-500 text-xs sm:text-sm mt-1"></p>
                             </div>
                             
                             <div>
                                 <label for="telefono" class="block text-xs sm:text-sm font-bold text-gray-700 mb-1 sm:mb-2">TELÉFONO</label>
                                 <input type="tel" id="telefono" name="telefono"
                                     class="form-input"
-                                    value="{{ old('telefono') }}">
-                                @error('telefono')
-                                    <p class="text-red-500 text-xs sm:text-sm mt-1">{{ $message }}</p>
-                                @enderror
+                                    x-model="formData.telefono">
+                                <p x-show="errors.telefono" x-text="errors.telefono" class="text-red-500 text-xs sm:text-sm mt-1"></p>
                             </div>
                         </div>
 
@@ -734,20 +802,18 @@
                             <label for="email" class="block text-xs sm:text-sm font-bold text-gray-700 mb-1 sm:mb-2">EMAIL *</label>
                             <input type="email" id="email" name="email" required
                                 class="form-input"
-                                value="{{ old('email') }}">
-                            @error('email')
-                                <p class="text-red-500 text-xs sm:text-sm mt-1">{{ $message }}</p>
-                            @enderror
+                                x-model="formData.email">
+                            <p x-show="errors.email" x-text="errors.email" class="text-red-500 text-xs sm:text-sm mt-1"></p>
                         </div>
 
                         <div>
                             <label for="paquete" class="block text-xs sm:text-sm font-bold text-gray-700 mb-1 sm:mb-2">PAQUETE DE INTERÉS</label>
-                            <select id="paquete" name="paquete" class="form-select">
+                            <select id="paquete" name="paquete" class="form-select" x-model="formData.paquete">
                                 <option value="">Selecciona un paquete</option>
-                                <option value="starter" {{ old('paquete') == 'starter' ? 'selected' : '' }}>STARTER - 450€</option>
-                                <option value="pro" {{ old('paquete') == 'pro' ? 'selected' : '' }}>PRO - 950€</option>
-                                <option value="enterprise" {{ old('paquete') == 'enterprise' ? 'selected' : '' }}>ENTERPRISE - 1.300€</option>
-                                <option value="personalizado" {{ old('paquete') == 'personalizado' ? 'selected' : '' }}>Proyecto personalizado</option>
+                                <option value="starter">STARTER - 450€</option>
+                                <option value="pro">PRO - 950€</option>
+                                <option value="enterprise">ENTERPRISE - 1.300€</option>
+                                <option value="personalizado">Proyecto personalizado</option>
                             </select>
                         </div>
 
@@ -755,14 +821,20 @@
                             <label for="mensaje" class="block text-xs sm:text-sm font-bold text-gray-700 mb-1 sm:mb-2">CUÉNTANOS TU PROYECTO *</label>
                             <textarea id="mensaje" name="mensaje" required
                                 class="form-textarea"
-                                placeholder="Describe tu proyecto, objetivos y cualquier detalle importante...">{{ old('mensaje') }}</textarea>
-                            @error('mensaje')
-                                <p class="text-red-500 text-xs sm:text-sm mt-1">{{ $message }}</p>
-                            @enderror
+                                placeholder="Describe tu proyecto, objetivos y cualquier detalle importante..."
+                                x-model="formData.mensaje"></textarea>
+                            <p x-show="errors.mensaje" x-text="errors.mensaje" class="text-red-500 text-xs sm:text-sm mt-1"></p>
                         </div>
 
-                        <button type="submit" class="btn-submit">
-                            🚀 ENVIAR PROPUESTA GRATUITA
+                        <button type="submit" id="submitBtn" class="btn-submit" :disabled="loading" :class="loading ? 'opacity-50 cursor-not-allowed' : ''">
+                            <span x-show="!loading" id="submitText">🚀 ENVIAR PROPUESTA GRATUITA</span>
+                            <span x-show="loading" id="loadingText" class="flex items-center justify-center" style="display: none;">
+                                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                </svg>
+                                ENVIANDO...
+                            </span>
                         </button>
                     </form>
                 </div>
@@ -833,5 +905,241 @@
             </div>
         </div>
     </footer>
+
+    <!-- Script para el formulario de contacto con Alpine.js -->
+    <script>
+        function contactForm() {
+            return {
+                loading: false,
+                message: '',
+                messageType: '',
+                errors: {},
+                formData: {
+                    nombre: '',
+                    telefono: '',
+                    email: '',
+                    paquete: '',
+                    mensaje: ''
+                },
+                
+                init() {
+                    // Marcar que Alpine.js está manejando el formulario
+                    window.alpineFormActive = true;
+                    console.log('ContactForm inicializado con Alpine.js, loading:', this.loading);
+                    console.log('Mensaje inicial:', this.message);
+                    console.log('MessageType inicial:', this.messageType);
+                },
+                
+                async submitForm() {
+                    console.log('submitForm llamado, loading antes:', this.loading);
+                    
+                    // Prevenir envíos múltiples con flag global
+                    if (this.loading || window.formSubmitting) {
+                        console.log('Ya está enviando, ignorando...');
+                        return;
+                    }
+                    
+                    // Establecer flag global
+                    window.formSubmitting = true;
+                    this.loading = true;
+                    this.message = '';
+                    this.errors = {};
+                    
+                    console.log('Estado loading establecido a true:', this.loading);
+                    
+                    try {
+                        // Verificar que tenemos el token CSRF
+                        const csrfToken = document.querySelector('meta[name="csrf-token"]');
+                        if (!csrfToken) {
+                            throw new Error('Token CSRF no encontrado');
+                        }
+                        
+                        const formData = new FormData();
+                        formData.append('_token', csrfToken.getAttribute('content'));
+                        formData.append('nombre', this.formData.nombre);
+                        formData.append('telefono', this.formData.telefono);
+                        formData.append('email', this.formData.email);
+                        formData.append('paquete', this.formData.paquete);
+                        formData.append('mensaje', this.formData.mensaje);
+                        
+                        console.log('Enviando formulario...');
+                        
+                        const response = await fetch('{{ route("contacto.enviar") }}', {
+                            method: 'POST',
+                            body: formData,
+                            headers: {
+                                'X-Requested-With': 'XMLHttpRequest',
+                                'Accept': 'application/json',
+                            }
+                        });
+                        
+                        console.log('Respuesta recibida:', response.status);
+                        
+                        // Intentar parsear la respuesta como JSON
+                        let data;
+                        try {
+                            const responseText = await response.text();
+                            console.log('Texto de respuesta:', responseText);
+                            data = JSON.parse(responseText);
+                        } catch (parseError) {
+                            console.error('Error parseando JSON:', parseError);
+                            throw new Error('Respuesta del servidor no válida');
+                        }
+                        
+                        console.log('Datos parseados:', data);
+                        
+                        if (response.ok && data.success) {
+                            this.message = data.message || '¡Mensaje enviado correctamente! Te contactaremos pronto.';
+                            this.messageType = 'success';
+                            this.errors = {}; // Limpiar errores
+                            
+                            console.log('Éxito - mensaje establecido:', this.message);
+                            console.log('Tipo de mensaje:', this.messageType);
+                            
+                            // Limpiar formulario
+                            this.formData = {
+                                nombre: '',
+                                telefono: '',
+                                email: '',
+                                paquete: '',
+                                mensaje: ''
+                            };
+                            
+                            // Scroll suave al mensaje después de un breve delay
+                            setTimeout(() => {
+                                const messageEl = document.querySelector('[x-show="message && message.length > 0"]');
+                                if (messageEl && messageEl.style.display !== 'none') {
+                                    messageEl.scrollIntoView({ 
+                                        behavior: 'smooth', 
+                                        block: 'center' 
+                                    });
+                                }
+                            }, 200);
+                            
+                        } else {
+                            if (data.errors) {
+                                this.errors = data.errors;
+                                this.message = 'Por favor, corrige los errores en el formulario.';
+                                console.log('Errores de validación:', data.errors);
+                            } else {
+                                this.message = data.message || 'Hubo un error al enviar el mensaje. Inténtalo de nuevo.';
+                            }
+                            this.messageType = 'error';
+                            console.log('Error - mensaje establecido:', this.message);
+                        }
+                        
+                    } catch (error) {
+                        console.error('Error completo:', error);
+                        this.message = 'Error de conexión. Por favor, inténtalo de nuevo.';
+                        this.messageType = 'error';
+                    } finally {
+                        // Limpiar flags
+                        this.loading = false;
+                        window.formSubmitting = false;
+                        console.log('Estado loading restablecido a false:', this.loading);
+                        console.log('Mensaje final:', this.message);
+                        console.log('MessageType final:', this.messageType);
+                        
+                        // Auto-ocultar mensaje después de 8 segundos si es éxito
+                        if (this.messageType === 'success' && this.message) {
+                            setTimeout(() => {
+                                console.log('Auto-ocultando mensaje de éxito');
+                                this.message = '';
+                                this.messageType = '';
+                            }, 8000);
+                        }
+                    }
+                }
+            }
+        }
+        
+        // Función para el menú móvil (si no está ya definida)
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+        
+        // Backup JavaScript vanilla para el formulario (solo si Alpine.js no está disponible)
+        document.addEventListener('DOMContentLoaded', function() {
+            // Esperar un poco para que Alpine.js se inicialice
+            setTimeout(() => {
+                // Verificar si Alpine.js está manejando el formulario
+                if (window.alpineFormActive || typeof window.Alpine !== 'undefined') {
+                    console.log('Alpine.js detectado y activo, usando Alpine.js para el formulario');
+                    return;
+                }
+                
+                console.log('Alpine.js no detectado, usando JavaScript vanilla como respaldo');
+                
+                const form = document.getElementById('contactoForm');
+                const submitBtn = document.getElementById('submitBtn');
+                const submitText = document.getElementById('submitText');
+                const loadingText = document.getElementById('loadingText');
+                const messageContainer = document.getElementById('messageContainer');
+                const messageText = document.getElementById('messageText');
+                
+                if (form) {
+                    form.addEventListener('submit', async function(e) {
+                        e.preventDefault();
+                        
+                        console.log('Formulario enviado con JavaScript vanilla (respaldo)');
+                    
+                    // Mostrar loading
+                    submitBtn.disabled = true;
+                    submitText.style.display = 'none';
+                    loadingText.style.display = 'flex';
+                    
+                    try {
+                        const formData = new FormData(form);
+                        const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+                        formData.append('_token', csrfToken);
+                        
+                        const response = await fetch('{{ route("contacto.enviar") }}', {
+                            method: 'POST',
+                            body: formData,
+                            headers: {
+                                'X-Requested-With': 'XMLHttpRequest',
+                                'Accept': 'application/json',
+                            }
+                        });
+                        
+                        const data = await response.json();
+                        console.log('Respuesta recibida:', data);
+                        
+                        if (response.ok && data.success) {
+                            // Mostrar mensaje de éxito
+                            messageText.textContent = data.message || '¡Mensaje enviado correctamente! Te contactaremos pronto.';
+                            messageContainer.className = 'px-4 py-3 rounded-lg mb-4 sm:mb-6 text-sm sm:text-base border bg-green-100 border-green-400 text-green-700';
+                            messageContainer.style.display = 'block';
+                            
+                            // Limpiar formulario
+                            form.reset();
+                            
+                            // Scroll al mensaje
+                            messageContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            
+                        } else {
+                            // Mostrar mensaje de error
+                            messageText.textContent = data.message || 'Hubo un error al enviar el mensaje.';
+                            messageContainer.className = 'px-4 py-3 rounded-lg mb-4 sm:mb-6 text-sm sm:text-base border bg-red-100 border-red-400 text-red-700';
+                            messageContainer.style.display = 'block';
+                        }
+                        
+                    } catch (error) {
+                        console.error('Error:', error);
+                        messageText.textContent = 'Error de conexión. Por favor, inténtalo de nuevo.';
+                        messageContainer.className = 'px-4 py-3 rounded-lg mb-4 sm:mb-6 text-sm sm:text-base border bg-red-100 border-red-400 text-red-700';
+                        messageContainer.style.display = 'block';
+                    } finally {
+                        // Restaurar botón
+                        submitBtn.disabled = false;
+                        submitText.style.display = 'inline';
+                        loadingText.style.display = 'none';
+                    }
+                });
+            }
+            }, 100); // Delay para que Alpine.js se inicialice
+        });
+    </script>
 </body>
 </html>

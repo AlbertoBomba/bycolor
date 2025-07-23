@@ -1,5 +1,5 @@
 # Robots.txt para bycolor.es
-# Diseño web personalizado en España
+# Diseño web personalizado en Toledo
 
 User-agent: *
 Allow: /
@@ -9,11 +9,12 @@ Sitemap: https://bycolor.es/sitemap.xml
 
 # Páginas principales permitidas
 Allow: /
-Allow: /#servicios
-Allow: /#casos
-Allow: /#paquetes
-Allow: /#faq
-Allow: /#contacto
+Allow: /diseño-web-en-toledo
+Allow: /diseño-web-en-toledo#desarrollo-web
+Allow: /diseño-web-en-toledo#clientes-desarrollo-web
+Allow: /diseño-web-en-toledo#precio-pagina-web
+Allow: /diseño-web-en-toledo#preguntas-desarrollo-web
+Allow: /diseño-web-en-toledo#presupuestos-pagina-web
 
 # Servicios específicos (futuras páginas)
 Allow: /servicios/
@@ -73,4 +74,5 @@ Crawl-delay: 2
 
 # Información de contacto para webmasters
 # Email: att@bycolor.es
-# Sitio web: https://bycolor.es
+# Sitio web: https://bycolor.es/diseño-web-en-toledo
+# Especialistas en diseño web en Toledo
