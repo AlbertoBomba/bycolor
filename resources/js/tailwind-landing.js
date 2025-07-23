@@ -1,5 +1,8 @@
 // Tailwind Landing Page JavaScript Functions
 
+// Importar Alpine.js
+import Alpine from 'alpinejs';
+
 // Alpine.js Contact Form Component
 function contactForm() {
     return {
@@ -272,5 +275,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
+
+// Hacer las funciones disponibles globalmente
+window.contactForm = contactForm;
+window.toggleMobileMenu = toggleMobileMenu;
+
+// Hacer Alpine disponible globalmente e inicializar
+window.Alpine = Alpine;
+Alpine.start();
     });
 });

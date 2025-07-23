@@ -19,9 +19,6 @@
     
     @vite(['resources/css/app.css', 'resources/css/landing.css', 'resources/css/tailwind-landing-styles.css', 'resources/js/app.js', 'resources/js/landing.js', 'resources/js/tailwind-landing.js'])
     
-    <!-- Alpine.js -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    
     <!-- Contact route for JavaScript -->
     <script>
         window.contactRoute = '{{ route("contacto.enviar") }}';
@@ -90,14 +87,14 @@
         
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20">
             <h1 class="text-3xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-insane font-black mb-6 sm:mb-8 transform -skew-x-6 glitch drop-shadow-xl leading-none">
-                <span class="text-red-600">Desarrollo</span> <span class="text-blue-600">WEB en</span> <span class="text-green-600">TOLEDO</span>
+                <span class="text-red-600">Diseño</span> <span class="text-blue-600">WEB en</span> <span class="text-green-600">TOLEDO</span>
             </h1>
             <div class="text-2xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-mega font-black text-purple-600 mb-8 sm:mb-12 transform skew-x-3 rotate-1 animate-pulse-brutal drop-shadow-lg leading-none">
                 ¡SOMOS ÚNICOS!
             </div>
             <p class="text-base sm:text-lg md:text-2xl lg:text-3xl text-white font-light mb-6 sm:mb-8 max-w-full sm:max-w-4xl mx-auto leading-relaxed bg-white/10 backdrop-blur-sm p-4 sm:p-6 rounded-2xl shadow-lg border border-white/20">
-                No usamos plantillas. Nuestro <span class="font-black text-red-400 text-lg sm:text-xl md:text-3xl lg:text-5xl">Desarrollo web en toledo personalizado</span> 
-                100%. Manteniendo la premisa de que cada cliente es único.
+                En Diseño web en Toledo, tenemos claro que<span class="font-black text-red-400 text-lg sm:text-xl md:text-3xl lg:text-5xl"> CADA CLIENTE ES ÚNICO</span>
+                . Manteniendo la premisa que todas nuestras web, serán únicas. Manteniendo la estructura SEO.
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mt-8 sm:mt-16">
