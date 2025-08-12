@@ -23,6 +23,17 @@
     <script>
         window.contactRoute = '{{ route("contacto.enviar") }}';
     </script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-15CW1FGNLK"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-15CW1FGNLK');
+    </script>
+
 </head>
 <body class="bg-white overflow-x-hidden">
     <!-- WhatsApp Float Button -->
@@ -48,21 +59,21 @@
                 </button>
                 <!-- Desktop menu -->
                 <div class="hidden md:flex space-x-4 lg:space-x-8">
-                    <a href="#desarrollo-web" class="text-sm lg:text-lg font-bold text-gray-200 hover:text-red-400 transition-all transform hover:scale-110">SERVICIOS</a>
-                    <a href="#clientes-desarrollo-web" class="text-sm lg:text-lg font-bold text-gray-200 hover:text-blue-400 transition-all transform hover:scale-110">CLIENTES</a>
-                    <a href="#precio-pagina-web" class="text-sm lg:text-lg font-bold text-gray-200 hover:text-green-400 transition-all transform hover:scale-110">PAQUETES</a>
-                    <a href="#preguntas-desarrollo-web" class="text-sm lg:text-lg font-bold text-gray-200 hover:text-purple-400 transition-all transform hover:scale-110">FAQ</a>
-                    <a href="#presupuestos-pagina-web" class="bg-gradient-to-r from-red-500 to-purple-600 text-white px-4 lg:px-6 py-2 rounded-full font-black transform hover:scale-110 transition-all text-sm lg:text-base">CONTACTO</a>
+                    <a href="#desarrollo-web" title="Ancla hacia sección de servicios" class="text-sm lg:text-lg font-bold text-gray-200 hover:text-red-400 transition-all transform hover:scale-110">SERVICIOS</a>
+                    <a href="#clientes-desarrollo-web" title="Ancla hacia sección de clientes" class="text-sm lg:text-lg font-bold text-gray-200 hover:text-blue-400 transition-all transform hover:scale-110">CLIENTES</a>
+                    <a href="#precio-pagina-web" title="Ancla hacia sección de paquetes" class="text-sm lg:text-lg font-bold text-gray-200 hover:text-green-400 transition-all transform hover:scale-110">PAQUETES</a>
+                    <a href="#preguntas-desarrollo-web" title="Ancla hacia sección de preguntas frecuentes" class="text-sm lg:text-lg font-bold text-gray-200 hover:text-purple-400 transition-all transform hover:scale-110">FAQ</a>
+                    <a href="#presupuestos-pagina-web" title="Ancla hacia sección de contacto" class="bg-gradient-to-r from-red-500 to-purple-600 text-white px-4 lg:px-6 py-2 rounded-full font-black transform hover:scale-110 transition-all text-sm lg:text-base">CONTACTO</a>
                 </div>
             </div>
             
             <!-- Mobile menu -->
             <div id="mobileMenu" class="md:hidden hidden mt-4 pb-4 space-y-3">
-                <a href="#desarrollo-web" class="block text-lg font-bold text-gray-200 hover:text-red-400 transition-all py-2" onclick="toggleMobileMenu()">SERVICIOS</a>
-                <a href="#clientes-desarrollo-web" class="block text-lg font-bold text-gray-200 hover:text-blue-400 transition-all py-2" onclick="toggleMobileMenu()">CLIENTES</a>
-                <a href="#precio-pagina-web" class="block text-lg font-bold text-gray-200 hover:text-green-400 transition-all py-2" onclick="toggleMobileMenu()">PAQUETES</a>
-                <a href="#preguntas-desarrollo-web" class="block text-lg font-bold text-gray-200 hover:text-purple-400 transition-all py-2" onclick="toggleMobileMenu()">FAQ</a>
-                <a href="#presupuestos-pagina-web" class="block bg-gradient-to-r from-red-500 to-purple-600 text-white px-6 py-3 rounded-full font-black transition-all text-center" onclick="toggleMobileMenu()">CONTACTO</a>
+                <a href="#desarrollo-web" title="Ancla hacia sección de servicios" class="block text-lg font-bold text-gray-200 hover:text-red-400 transition-all py-2" onclick="toggleMobileMenu()">SERVICIOS</a>
+                <a href="#clientes-desarrollo-web" title="Ancla hacia sección de clientes" class="block text-lg font-bold text-gray-200 hover:text-blue-400 transition-all py-2" onclick="toggleMobileMenu()">CLIENTES</a>
+                <a href="#precio-pagina-web" title="Ancla hacia sección de paquetes" class="block text-lg font-bold text-gray-200 hover:text-green-400 transition-all py-2" onclick="toggleMobileMenu()">PAQUETES</a>
+                <a href="#preguntas-desarrollo-web" title="Ancla hacia sección de preguntas frecuentes" class="block text-lg font-bold text-gray-200 hover:text-purple-400 transition-all py-2" onclick="toggleMobileMenu()">FAQ</a>
+                <a href="#presupuestos-pagina-web" title="Ancla hacia sección de contacto" class="block bg-gradient-to-r from-red-500 to-purple-600 text-white px-6 py-3 rounded-full font-black transition-all text-center" onclick="toggleMobileMenu()">CONTACTO</a>
             </div>
         </div>
     </nav>
@@ -93,15 +104,15 @@
                 ¡SOMOS ÚNICOS!
             </div>
             <p class="text-base sm:text-lg md:text-2xl lg:text-3xl text-white font-light mb-6 sm:mb-8 max-w-full sm:max-w-4xl mx-auto leading-relaxed bg-white/10 backdrop-blur-sm p-4 sm:p-6 rounded-2xl shadow-lg border border-white/20">
-                En Diseño web en Toledo, tenemos claro que<span class="font-black text-red-400 text-lg sm:text-xl md:text-3xl lg:text-5xl"> CADA CLIENTE ES ÚNICO</span>
-                . Manteniendo la premisa que todas nuestras web, serán únicas. Manteniendo la estructura SEO.
+                En Diseño web en Toledo, tenemos claro que<span class="font-black text-red-400 text-lg sm:text-xl md:text-3xl lg:text-5xl"> CADA CLIENTE ES ÚNICO. </span>
+                 Manteniendo la premisa que todas nuestras web, serán únicas. Manteniendo la estructura SEO.
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mt-8 sm:mt-16">
-                <a href="#contacto" class="bg-gradient-to-r from-red-500 to-pink-500 text-white px-6 sm:px-8 md:px-12 lg:px-16 py-3 sm:py-4 md:py-6 lg:py-8 text-base sm:text-lg md:text-2xl lg:text-4xl font-black transform -rotate-3 hover:rotate-0 hover:scale-110 transition-all shadow-2xl rounded-full backdrop-blur-sm border-2 border-white/20 w-full sm:w-auto text-center">
+                <a href="#presupuestos-pagina-web" title="Ancla hacia sección de contacto" title="Ancla hacia formulario de contacto" class="bg-gradient-to-r from-red-500 to-pink-500 text-white px-6 sm:px-8 md:px-12 lg:px-16 py-3 sm:py-4 md:py-6 lg:py-8 text-base sm:text-lg md:text-2xl lg:text-4xl font-black transform -rotate-3 hover:rotate-0 hover:scale-110 transition-all shadow-2xl rounded-full backdrop-blur-sm border-2 border-white/20 w-full sm:w-auto text-center">
                     ¡QUIERO TRABAJAR CON VOSOTROS!
                 </a>
-                <a href="#casos" class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 sm:px-8 md:px-12 lg:px-16 py-3 sm:py-4 md:py-6 lg:py-8 text-base sm:text-lg md:text-2xl lg:text-4xl font-black transform rotate-2 hover:rotate-0 hover:scale-110 transition-all shadow-2xl rounded-full backdrop-blur-sm border-2 border-white/20 w-full sm:w-auto text-center">
+                <a href="#clientes-desarrollo-web" title="Ancla hacia sección de casos de éxito" class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 sm:px-8 md:px-12 lg:px-16 py-3 sm:py-4 md:py-6 lg:py-8 text-base sm:text-lg md:text-2xl lg:text-4xl font-black transform rotate-2 hover:rotate-0 hover:scale-110 transition-all shadow-2xl rounded-full backdrop-blur-sm border-2 border-white/20 w-full sm:w-auto text-center">
                     VER CASOS DE ÉXITO
                 </a>
             </div>
@@ -129,7 +140,7 @@
                     <span class="text-red-600">LO</span> <span class="text-blue-600">QUE</span> <span class="text-green-600">HACEMOS</span>
                 </h2>
                 <p class="text-xs sm:text-sm md:text-lg lg:text-2xl text-gray-700 max-w-full sm:max-w-4xl mx-auto px-4 font-bold">
-                    Nuestro objetivo es el diseño web en toledo personalizado para nuestro cliente, porque cada cliente tiene sus necesidades. 
+                    Nuestro objetivo es el diseño web personalizado para nuestro cliente en Toledo, porque cada cliente tiene sus necesidades. 
                     Todas nuestras páginas webs están diseñadas con la estructura SEO y UX en mente, facilitando la navegación y mejorando la experiencia del usuario.
                 </p>
                     <span class="font-black text-red-500 text-lg sm:text-xl md:text-3xl lg:text-5xl">AUMENTAR</span> tus ventas y 
@@ -242,57 +253,78 @@
                         <p class="text-gray-600 mt-4 text-sm sm:text-base mb-4">
                             "Sistema implantado desde 2022, con más de 1200 alumnos gestionados."
                         </p>
-                        <a href="https://cdpuebla.es" target="_blank" class="inline-block w-full bg-gradient-to-r from-red-500 to-red-600 text-white py-3 sm:py-4 px-4 sm:px-6 text-sm sm:text-base font-black rounded-lg hover:from-red-600 hover:to-red-700 transform hover:scale-105 transition-all text-center">
+                        <a href="https://cdpuebla.es" title="Ver sitio web de CD Puebla" target="_blank" class="inline-block w-full bg-gradient-to-r from-red-500 to-red-600 text-white py-3 sm:py-4 px-4 sm:px-6 text-sm sm:text-base font-black rounded-lg hover:from-red-600 hover:to-red-700 transform hover:scale-105 transition-all text-center">
                             🌐 VER WEB EN VIVO
                         </a>
                     </div>
                 </div>
 
                 <!-- Caso 2 - MINI CARD -->
-                {{-- <div class="bg-white p-3 sm:p-4 rounded-2xl shadow-2xl transform -rotate-12 hover:rotate-0 hover:scale-105 transition-all">
-                    <div class="text-2xl sm:text-3xl mb-2 sm:mb-3 text-center">🏥</div>
-                    <h3 class="text-xs sm:text-sm font-black text-blue-600 mb-1 sm:mb-2">CLÍNICA</h3>
-                    <h3 class="text-lg sm:text-xl md:text-3xl font-black text-blue-800 mb-2 sm:mb-3 leading-none">DENTAL</h3>
-                    <div class="space-y-1 sm:space-y-2">
-                        <div class="bg-green-100 p-1 sm:p-2 rounded">
-                            <div class="text-sm sm:text-lg md:text-2xl font-black text-green-800">+380%</div>
-                            <div class="text-xs text-green-600">Citas online</div>
-                        </div>
-                        <div class="bg-purple-100 p-1 sm:p-2 rounded">
-                            <div class="text-xs sm:text-sm md:text-lg font-black text-purple-800">TOP 3</div>
-                            <div class="text-xs text-purple-600">Google local</div>
-                        </div>
+                <div class="bg-white  rounded-2xl shadow-2xl transform -rotate-12 hover:rotate-0 hover:scale-105 transition-all rounded-t-2xl">
+                    <div class="text-2xl sm:text-3xl3 text-center">
+                        <img src="{{ asset('images/casos-exito/web-club-de-tiro-los-llanos.png') }}" alt="Club de tiro los llanos - Web + Blog + SEO orgánico" 
+                        class="w-full h-64 sm:h-80 md:h-96 object-cover lazy rounded-t-2xl" loading="lazy">
                     </div>
-                    <p class="text-gray-600 mt-2 text-xs mb-3">
-                        "La web se paga sola con 2 pacientes al mes."
-                    </p>
-                    <a href="https://clinicadentalejemplo.com" target="_blank" class="inline-block w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-1 sm:py-2 px-2 sm:px-3 text-xs font-black rounded hover:from-blue-600 hover:to-blue-700 transform hover:scale-105 transition-all text-center">
-                        🌐 VER WEB
-                    </a>
-                </div> --}}
+                    <div class="px-6 sm:px-8 pb-6 sm:pb-8">
+                        <h3 class="text-xs sm:text-sm font-black text-blue-600 mb-1 sm:mb-2">Club de tiro los llanos </h3>
+                        <h3 class="text-lg sm:text-xl md:text-3xl font-black text-blue-800 mb-2 sm:mb-3 leading-none">Web + blog + SEO orgánico</h3>
+                        <!-- Problemas Resueltos -->
+                        <div class="bg-gray-50 p-3 sm:p-4 rounded-lg mb-4">
+                            <h4 class="text-xs sm:text-sm font-black text-gray-800 mb-2">✅ PROBLEMAS RESUELTOS:</h4>
+                            <ul class="space-y-1 text-sm text-gray-600">
+                                <li>• Mejora en posición google, para de 4 página a salir en el top 3 de la primera</li>
+                                <li>• Mejora en la información a sus clientes con el apartado de blog</li>
+                                <li>• Mejora de comunicación con clientes</li>
+                                <li>• Ayuda a posicionamiento, y trazo de mapa hacia el negocio</li>
+                            </ul>
+                        </div>
+                        <div class="space-y-1 sm:space-y-2">
+                            <div class="bg-green-100 p-1 sm:p-2 rounded">
+                                <div class="text-sm sm:text-lg md:text-2xl font-black text-green-800">+150%</div>
+                                <div class="text-xs text-green-600">Visitas en 2 meses</div>
+                            </div>
+                            <div class="bg-purple-100 p-1 sm:p-2 rounded">
+                                <div class="text-xs sm:text-sm md:text-lg font-black text-purple-800">TOP 3</div>
+                                <div class="text-xs text-purple-600">Sector caza </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mt-2 text-xs mb-3">
+                            "Web que se desarrolla para potenciar la captación de clientes en temporada de caza. Fue un éxito en 2 meses
+                            se ocupó del 80% de las cacerías que se realizaron ese año"
+                        </p>
+                        <a href="https://clubdetiro-losllanos.es" title="Ver sitio web del Club de Tiro Los Llanos" target="_blank" class="inline-block w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-1 sm:py-2 px-2 sm:px-3 text-xs font-black rounded hover:from-blue-600 hover:to-blue-700 transform hover:scale-105 transition-all text-center">
+                            🌐 VER WEB
+                        </a>
+                    </div>
+                </div>
 
                 <!-- Caso 3 - MEDIUM CARD -->
-                {{-- <div class="bg-white p-5 sm:p-6 rounded-3xl shadow-2xl transform rotate-15 hover:rotate-0 hover:scale-105 transition-all">
-                    <div class="text-4xl sm:text-6xl md:text-8xl mb-3 sm:mb-4 text-center">🏢</div>
-                    <h3 class="text-sm sm:text-lg md:text-xl font-black text-green-600 mb-2 sm:mb-3">CONSUL</h3>
-                    <h3 class="text-2xl sm:text-4xl md:text-6xl font-black text-green-800 mb-3 sm:mb-4 leading-none">TORÍA</h3>
-                    <div class="space-y-2 sm:space-y-3">
-                        <div class="bg-green-100 p-2 sm:p-3 rounded-lg">
-                            <div class="text-lg sm:text-2xl md:text-4xl font-black text-green-800">+290%</div>
-                            <div class="text-xs sm:text-sm text-green-600">Leads cualificados</div>
-                        </div>
-                        <div class="bg-red-100 p-2 sm:p-3 rounded-lg">
-                            <div class="text-xl sm:text-3xl md:text-5xl font-black text-red-800">50K€</div>
-                            <div class="text-xs sm:text-sm text-red-600">Ventas extra</div>
-                        </div>
+                <div class="bg-white rounded-3xl shadow-2xl transform rotate-15 hover:rotate-0 hover:scale-105 transition-all">
+                    <div class="text-4xl sm:text-6xl md:text-8xl mb-3 sm:mb-4 text-center">
+                        <img src="{{ asset('images/casos-exito/web-obra-impala.png') }}" alt="Obras Impala - Web + Saas gestión web" 
+                        class="w-full h-64 sm:h-80 md:h-96 object-cover lazy rounded-t-2xl" loading="lazy">
                     </div>
-                    <p class="text-gray-600 mt-3 text-xs sm:text-sm mb-4">
-                        "ROI del 800% en el primer año."
-                    </p>
-                    <a href="https://consultoriaejemplo.com" target="_blank" class="inline-block w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-2 sm:py-3 px-3 sm:px-4 text-xs sm:text-sm font-black rounded-lg hover:from-green-600 hover:to-green-700 transform hover:scale-105 transition-all text-center">
-                        🌐 VER WEB EN VIVO
-                    </a>
-                </div> --}}
+                    <div class="px-6 sm:px-8 pb-6 sm:pb-8">
+                        <h3 class="text-sm sm:text-lg md:text-xl font-black text-green-600 mb-2 sm:mb-3">Obras Impala</h3>
+                        <h3 class="text-2xl sm:text-4xl md:text-6xl font-black text-green-800 mb-3 sm:mb-4 leading-none">Web +Saas gestion web</h3>
+                        <div class="space-y-2 sm:space-y-3">
+                            <div class="bg-green-100 p-2 sm:p-3 rounded-lg">
+                                <div class="text-lg sm:text-2xl md:text-4xl font-black text-green-800">+60%</div>
+                                <div class="text-xs sm:text-sm text-green-600">Leads cualificados</div>
+                            </div>
+                            <div class="bg-red-100 p-2 sm:p-3 rounded-lg">
+                                <div class="text-xl sm:text-3xl md:text-5xl font-black text-red-800">Mejora de web</div>
+                                <div class="text-xs sm:text-sm text-red-600">Ventas extra</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mt-3 text-xs sm:text-sm mb-4">
+                            "Remodelación de web con diseño moderno. No se usaron plantillas, proyecto realizado entero con Tailwind CSS."
+                        </p>
+                        <a href="https://obrasimpala.com" target="_blank" class="inline-block w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-2 sm:py-3 px-3 sm:px-4 text-xs sm:text-sm font-black rounded-lg hover:from-green-600 hover:to-green-700 transform hover:scale-105 transition-all text-center">
+                            🌐 VER WEB EN VIVO
+                        </a>
+                    </div>
+                </div>
 
                 <!-- Caso 4 - TINY CARD -->
                 {{-- <div class="bg-white p-2 sm:p-3 rounded-xl shadow-2xl transform -rotate-6 hover:rotate-0 hover:scale-105 transition-all">
@@ -319,7 +351,7 @@
             </div>
 
             <div class="text-center mt-12 sm:mt-16">
-                <a href="#contacto" class="bg-gradient-to-r from-green-500 to-blue-500 text-white px-6 sm:px-8 md:px-12 lg:px-16 py-3 sm:py-4 md:py-6 lg:py-8 text-base sm:text-lg md:text-2xl lg:text-4xl font-black rounded-full transform hover:scale-110 transition-all shadow-2xl inline-block">
+                <a href="#presupuestos-pagina-web" title="Ancla hacia formulario de contacto" class="bg-gradient-to-r from-green-500 to-blue-500 text-white px-6 sm:px-8 md:px-12 lg:px-16 py-3 sm:py-4 md:py-6 lg:py-8 text-base sm:text-lg md:text-2xl lg:text-4xl font-black rounded-full transform hover:scale-110 transition-all shadow-2xl inline-block">
                     QUIERO ESTOS RESULTADOS
                 </a>
             </div>
@@ -476,7 +508,7 @@
                         </li>
                     </ul>
                     
-                    <a href="#contacto" class="block bg-green-600 text-white text-center py-3 sm:py-4 rounded-full font-black text-base sm:text-lg hover:bg-green-700 transition-all transform hover:scale-105">
+                    <a href="#presupuestos-pagina-web" title="Ancla hacia formulario de contacto" class="block bg-green-600 text-white text-center py-3 sm:py-4 rounded-full font-black text-base sm:text-lg hover:bg-green-700 transition-all transform hover:scale-105">
                         EMPEZAR AHORA
                     </a>
                 </div>
@@ -519,8 +551,8 @@
                             <span class="font-medium text-sm sm:text-base">Entrega en 30 días</span>
                         </li>
                     </ul>
-                    
-                    <a href="#contacto" class="block bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-3 sm:py-4 rounded-full font-black text-base sm:text-lg hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105">
+
+                    <a href="#presupuestos-pagina-web" class="block bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-3 sm:py-4 rounded-full font-black text-base sm:text-lg hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105">
                         ELEGIR PRO
                     </a>
                 </div>
@@ -560,7 +592,7 @@
                         </li>
                     </ul>
                     
-                    <a href="#contacto" class="block bg-red-600 text-white text-center py-3 sm:py-4 rounded-full font-black text-base sm:text-lg hover:bg-red-700 transition-all transform hover:scale-105">
+                    <a href="#presupuestos-pagina-web" class="block bg-red-600 text-white text-center py-3 sm:py-4 rounded-full font-black text-base sm:text-lg hover:bg-red-700 transition-all transform hover:scale-105">
                         CONTACTAR
                     </a>
                 </div>
@@ -639,8 +671,8 @@
                 <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg transform -rotate-1 hover:rotate-0 transition-all">
                     <h3 class="text-xl sm:text-2xl font-black text-gray-800 mb-3 sm:mb-4">¿Trabajáis con todo tipo de negocios?</h3>
                     <p class="text-gray-600 text-base sm:text-lg">
-                        Trabajamos con cualquier negocio que quiera <span class="font-bold text-red-600">conseguir más clientes</span>. 
-                        Desde tiendas online hasta servicios profesionales.
+                        <span class="font-bold text-red-600">No,</span> primero hacemos un estudio de mercado. Trabajamos <span class="font-bold text-red-600">solo con clientes
+                        a los que podemos aportar valor</span>, o bien para conseguir más cliente o mejorar su imagen digital. No trabajamos con cliente que no quieran mejorar su negocio.
                     </p>
                 </div>
 
@@ -818,16 +850,15 @@
                         No hacemos páginas bonitas, hacemos máquinas de ventas.
                     </p>
                 </div>
-
                 <!-- Enlaces rápidos -->
                 <div class="text-center sm:text-left">
                     <h4 class="text-xl sm:text-2xl font-black text-red-500 mb-4 sm:mb-6">NAVEGACIÓN</h4>
                     <ul class="space-y-2 sm:space-y-3">
-                        <li><a href="#servicios" class="text-gray-300 hover:text-white transition-all font-medium text-sm sm:text-base">Servicios</a></li>
-                        <li><a href="#casos" class="text-gray-300 hover:text-white transition-all font-medium text-sm sm:text-base">Casos de Éxito</a></li>
-                        <li><a href="#paquetes" class="text-gray-300 hover:text-white transition-all font-medium text-sm sm:text-base">Paquetes</a></li>
-                        <li><a href="#faq" class="text-gray-300 hover:text-white transition-all font-medium text-sm sm:text-base">FAQ</a></li>
-                        <li><a href="#contacto" class="text-gray-300 hover:text-white transition-all font-medium text-sm sm:text-base">Contacto</a></li>
+                        <li><a href="#desarrollo-web" class="text-gray-300 hover:text-white transition-all font-medium text-sm sm:text-base">Servicios</a></li>
+                        <li><a href="#clientes-desarrollo-web" class="text-gray-300 hover:text-white transition-all font-medium text-sm sm:text-base">Clientes</a></li>
+                        <li><a href="#precio-pagina-web" title="Ancla hacia sección de paquetes" class="text-gray-300 hover:text-white transition-all font-medium text-sm sm:text-base">Paquetes</a></li>
+                        <li><a href="#preguntas-desarrollo-web" title="Ancla hacia sección de preguntas frecuentes" class="text-gray-300 hover:text-white transition-all font-medium text-sm sm:text-base">FAQ</a></li>
+                        <li><a href="#presupuestos-pagina-web" title="Ancla hacia sección de contacto" class="text-gray-300 hover:text-white transition-all font-medium text-sm sm:text-base">Contacto</a></li>
                     </ul>
                 </div>
 
@@ -837,11 +868,7 @@
                     <div class="space-y-2 sm:space-y-3">
                         <div>
                             <div class="text-yellow-400 font-bold text-sm sm:text-base">Email</div>
-                            <div class="text-gray-300 text-sm sm:text-base">hola@bycolor.es</div>
-                        </div>
-                        <div>
-                            <div class="text-green-400 font-bold text-sm sm:text-base">WhatsApp</div>
-                            <div class="text-gray-300 text-sm sm:text-base">+34 XXX XXX XXX</div>
+                            <div class="text-gray-300 text-sm sm:text-base">att@bycolor.es</div>
                         </div>
                         <div>
                             <div class="text-purple-400 font-bold text-sm sm:text-base">Respuesta</div>
@@ -850,7 +877,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="border-t border-gray-800 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center">
                 <div class="text-gray-400 text-sm sm:text-base mb-3 sm:mb-4">
                     © 2024 bycolor.es - Todos los derechos reservados

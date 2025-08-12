@@ -6,7 +6,7 @@
     <!-- Página Principal -->
     <url>
         <loc>https://bycolor.es/</loc>
-        <lastmod>2025-01-23</lastmod>
+        <lastmod>2025-07-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/" />
@@ -15,7 +15,7 @@
     <!-- Landing Principal - Diseño Web Toledo -->
     <url>
         <loc>https://bycolor.es/diseño-web-en-toledo</loc>
-        <lastmod>2025-01-23</lastmod>
+        <lastmod>2025-07-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/diseño-web-en-toledo" />
@@ -29,7 +29,7 @@
     <!-- Sección Desarrollo Web / Servicios -->
     <url>
         <loc>https://bycolor.es/diseño-web-en-toledo#desarrollo-web</loc>
-        <lastmod>2025-01-23</lastmod>
+        <lastmod>2025-07-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/diseño-web-en-toledo#desarrollo-web" />
@@ -38,7 +38,7 @@
     <!-- Sección Casos de Éxito / Clientes -->
     <url>
         <loc>https://bycolor.es/diseño-web-en-toledo#clientes-desarrollo-web</loc>
-        <lastmod>2025-01-23</lastmod>
+        <lastmod>2025-07-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/diseño-web-en-toledo#clientes-desarrollo-web" />
@@ -52,7 +52,7 @@
     <!-- Sección Paquetes / Precios -->
     <url>
         <loc>https://bycolor.es/diseño-web-en-toledo#precio-pagina-web</loc>
-        <lastmod>2025-01-23</lastmod>
+        <lastmod>2025-07-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/diseño-web-en-toledo#precio-pagina-web" />
@@ -61,7 +61,7 @@
     <!-- Sección FAQ / Preguntas Frecuentes -->
     <url>
         <loc>https://bycolor.es/diseño-web-en-toledo#preguntas-desarrollo-web</loc>
-        <lastmod>2025-01-23</lastmod>
+        <lastmod>2025-07-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/diseño-web-en-toledo#preguntas-desarrollo-web" />
@@ -70,7 +70,7 @@
     <!-- Sección Contacto / Presupuestos -->
     <url>
         <loc>https://bycolor.es/diseño-web-en-toledo#presupuestos-pagina-web</loc>
-        <lastmod>2025-01-23</lastmod>
+        <lastmod>2025-07-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/diseño-web-en-toledo#presupuestos-pagina-web" />
@@ -78,7 +78,7 @@
     <!-- Sección Contacto / Presupuestos -->
     <url>
         <loc>https://bycolor.es/#presupuestos-pagina-web</loc>
-        <lastmod>2025-01-23</lastmod>
+        <lastmod>2025-07-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/#presupuestos-pagina-web" />
@@ -87,16 +87,21 @@
     <!-- Páginas de Landing Específicas -->
     <url>
         <loc>https://bycolor.es/tailwind-landing</loc>
-        <lastmod>2025-01-23</lastmod>
+        <lastmod>2025-07-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/tailwind-landing" />
+        <image:image>
+            <image:loc>https://bycolor.es/images/favicon/64_64.png</image:loc>
+            <image:title>Logo de bycolor.es</image:title>
+            <image:caption>Logo oficial de bycolor - Desarrollo web en Toledo</image:caption>
+        </image:image>
     </url>
     
     <!-- Páginas de Servicio Específicas para SEO -->
     <url>
         <loc>https://bycolor.es/desarrollo-web-madrid</loc>
-        <lastmod>2025-01-23</lastmod>
+        <lastmod>2025-07-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
         <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/desarrollo-web-madrid" />
@@ -104,7 +109,7 @@
     
     <url>
         <loc>https://bycolor.es/paginas-web-profesionales</loc>
-        <lastmod>2025-01-23</lastmod>
+        <lastmod>2025-07-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
         <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/paginas-web-profesionales" />
@@ -112,7 +117,7 @@
     
     <url>
         <loc>https://bycolor.es/tiendas-online</loc>
-        <lastmod>2025-01-23</lastmod>
+        <lastmod>2025-07-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
         <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/tiendas-online" />
@@ -120,7 +125,7 @@
     
     <url>
         <loc>https://bycolor.es/sistema-reservas-citas</loc>
-        <lastmod>2025-01-23</lastmod>
+        <lastmod>2025-07-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
         <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/sistema-reservas-citas" />
@@ -129,7 +134,7 @@
     <!-- Páginas de Paquetes Individuales -->
     <url>
         <loc>https://bycolor.es/paquetes/starter</loc>
-        <lastmod>2025-01-23</lastmod>
+        <lastmod>2025-07-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/paquetes/starter" />
@@ -137,7 +142,7 @@
     
     <url>
         <loc>https://bycolor.es/paquetes/pro</loc>
-        <lastmod>2025-01-23</lastmod>
+        <lastmod>2025-07-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/paquetes/pro" />
@@ -145,7 +150,7 @@
     
     <url>
         <loc>https://bycolor.es/paquetes/enterprise</loc>
-        <lastmod>2025-01-23</lastmod>
+        <lastmod>2025-07-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/paquetes/enterprise" />
@@ -154,7 +159,7 @@
     <!-- Casos de Éxito Detallados -->
     <url>
         <loc>https://bycolor.es/casos-exito/cd-puebla</loc>
-        <lastmod>2025-01-23</lastmod>
+        <lastmod>2025-07-24</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.6</priority>
         <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/casos-exito/cd-puebla" />
@@ -168,7 +173,7 @@
     <!-- Blog (Future Content) -->
     <url>
         <loc>https://bycolor.es/blog</loc>
-        <lastmod>2025-01-23</lastmod>
+        <lastmod>2025-07-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
         <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/blog" />
@@ -176,7 +181,7 @@
     
     <url>
         <loc>https://bycolor.es/blog/como-aumentar-ventas-web</loc>
-        <lastmod>2025-01-23</lastmod>
+        <lastmod>2025-07-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/blog/como-aumentar-ventas-web" />
@@ -184,7 +189,7 @@
     
     <url>
         <loc>https://bycolor.es/blog/seo-local-madrid</loc>
-        <lastmod>2025-01-23</lastmod>
+        <lastmod>2025-07-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/blog/seo-local-madrid" />
@@ -192,7 +197,7 @@
     
     <url>
         <loc>https://bycolor.es/blog/desarrollo-web-personalizado</loc>
-        <lastmod>2025-01-23</lastmod>
+        <lastmod>2025-07-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/blog/desarrollo-web-personalizado" />
@@ -201,7 +206,7 @@
     <!-- Páginas Legales -->
     <url>
         <loc>https://bycolor.es/politica-privacidad</loc>
-        <lastmod>2025-01-23</lastmod>
+        <lastmod>2025-07-24</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
         <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/politica-privacidad" />
@@ -209,7 +214,7 @@
     
     <url>
         <loc>https://bycolor.es/terminos-condiciones</loc>
-        <lastmod>2025-01-23</lastmod>
+        <lastmod>2025-07-24</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
         <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/terminos-condiciones" />
@@ -217,7 +222,7 @@
     
     <url>
         <loc>https://bycolor.es/aviso-legal</loc>
-        <lastmod>2025-01-23</lastmod>
+        <lastmod>2025-07-24</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
         <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/aviso-legal" />
@@ -225,7 +230,7 @@
     
     <url>
         <loc>https://bycolor.es/cookies</loc>
-        <lastmod>2025-01-23</lastmod>
+        <lastmod>2025-07-24</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
         <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/cookies" />
@@ -234,7 +239,7 @@
     <!-- Sitemap HTML para usuarios -->
     <url>
         <loc>https://bycolor.es/sitemap.html</loc>
-        <lastmod>2025-01-23</lastmod>
+        <lastmod>2025-07-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.4</priority>
         <xhtml:link rel="alternate" hreflang="es" href="https://bycolor.es/sitemap.html" />
