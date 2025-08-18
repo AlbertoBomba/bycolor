@@ -23,6 +23,36 @@ Route::get('/contacto', function () {
     return view('contacto');
 });
 
+// Páginas legales
+Route::get('/terminos-condiciones', function () {
+    return view('terminos-condiciones');
+});
+
+Route::get('/politica-privacidad', function () {
+    return view('politica-privacidad');
+});
+
+Route::get('/cookies', function () {
+    return view('cookies');
+});
+
+// Rutas de prueba para páginas de error (solo para testing)
+Route::get('/test-errors', function () {
+    return view('test-errors');
+});
+
+Route::get('/test-404', function () {
+    abort(404);
+});
+
+Route::get('/test-403', function () {
+    abort(403);
+});
+
+Route::get('/test-500', function () {
+    abort(500);
+});
+
 Route::post('/contacto', function (Request $request) {
     
     // Si es una petición AJAX, manejar errores de validación manualmente

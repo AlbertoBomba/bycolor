@@ -881,6 +881,22 @@
                 <div class="text-gray-400 text-sm sm:text-base mb-3 sm:mb-4">
                     © 2024 bycolor.es - Todos los derechos reservados
                 </div>
+                
+                <!-- Enlaces legales -->
+                <div class="mb-4 space-y-2 sm:space-y-0 sm:space-x-6 text-xs sm:text-sm">
+                    <a href="/terminos-condiciones" class="text-gray-400 hover:text-white transition-colors font-medium inline-block">
+                        Términos y Condiciones
+                    </a>
+                    <span class="text-gray-600 hidden sm:inline">|</span>
+                    <a href="/politica-privacidad" class="text-gray-400 hover:text-white transition-colors font-medium inline-block">
+                        Política de Privacidad
+                    </a>
+                    <span class="text-gray-600 hidden sm:inline">|</span>
+                    <a href="/cookies" class="text-gray-400 hover:text-white transition-colors font-medium inline-block">
+                        Cookies
+                    </a>
+                </div>
+                
                 <div class="text-lg sm:text-xl font-black transform rotate-1">
                     <span class="text-red-500">WEBS</span> 
                     <span class="text-blue-500">QUE</span> 
