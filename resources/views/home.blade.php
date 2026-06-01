@@ -855,7 +855,8 @@ function handleOverlayClick(e) {
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
 // Modal opinion form submit (AJAX)
-document.getElementById('wmodal-opinion-form').addEventListener('submit', async function(e) {
+const _opinionForm = document.getElementById('wmodal-opinion-form');
+if (_opinionForm) _opinionForm.addEventListener('submit', async function(e) {
     e.preventDefault();
     const errEl = document.getElementById('wmodal-opinion-error');
     const btn   = this.querySelector('button[type=submit]');

@@ -17,22 +17,30 @@ use App\Http\Controllers\Admin\ProductoController as AdminProductoController;
 
 // ── Página principal ──────────────────────────────────────────
 Route::get('/', function () {
-    $trabajosDestacados = \App\Models\Trabajo::with('imagenes')->where('destacado', true)
-        ->orderByDesc('fecha_realizacion')->take(3)->get();
+    try {
+        $trabajosDestacados = \App\Models\Trabajo::with('imagenes')->where('destacado', true)
+            ->orderByDesc('fecha_realizacion')->take(3)->get();
+    } catch (\Throwable $e) {
+        \Illuminate\Support\Facades\Log::error('Home: trabajosDestacados error: ' . $e->getMessage());
+        $trabajosDestacados = collect();
+    }
     try {
         $opiniones = \App\Models\Opinion::where('aprobada', true)->latest()->take(6)->get();
     } catch (\Throwable $e) {
+        \Illuminate\Support\Facades\Log::error('Home: opiniones error: ' . $e->getMessage());
         $opiniones = collect();
     }
     try {
         $heroSlides = \App\Models\HeroSlide::where('activo', true)->orderBy('orden')->get();
     } catch (\Throwable $e) {
+        \Illuminate\Support\Facades\Log::error('Home: heroSlides error: ' . $e->getMessage());
         $heroSlides = collect();
     }
     try {
         $productosDestacados = \App\Models\Producto::where('activo', true)->where('destacado', true)
             ->orderBy('orden')->orderBy('nombre')->take(4)->get();
     } catch (\Throwable $e) {
+        \Illuminate\Support\Facades\Log::error('Home: productosDestacados error: ' . $e->getMessage());
         $productosDestacados = collect();
     }
     return view('home', compact('trabajosDestacados', 'opiniones', 'heroSlides', 'productosDestacados'));
