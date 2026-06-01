@@ -6,35 +6,121 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 use App\Mail\ContactoWeb;
+use App\Http\Controllers\TrabajoController;
+use App\Http\Controllers\IncidenciaController;
+use App\Http\Controllers\OpinionController;
+use App\Http\Controllers\Admin;
+use App\Http\Controllers\Admin\IncidenciaController as AdminIncidenciaController;
+use App\Http\Controllers\Admin\OpinionController as AdminOpinionController;
+use App\Http\Controllers\Admin\HeroSlideController;
+use App\Http\Controllers\Admin\ProductoController as AdminProductoController;
 
+// ── Página principal ──────────────────────────────────────────
 Route::get('/', function () {
-    return redirect('/diseño-web-en-toledo');
+    $trabajosDestacados = \App\Models\Trabajo::with('imagenes')->where('destacado', true)
+        ->orderByDesc('fecha_realizacion')->take(3)->get();
+    try {
+        $opiniones = \App\Models\Opinion::where('aprobada', true)->latest()->take(6)->get();
+    } catch (\Throwable $e) {
+        $opiniones = collect();
+    }
+    try {
+        $heroSlides = \App\Models\HeroSlide::where('activo', true)->orderBy('orden')->get();
+    } catch (\Throwable $e) {
+        $heroSlides = collect();
+    }
+    try {
+        $productosDestacados = \App\Models\Producto::where('activo', true)->where('destacado', true)
+            ->orderBy('orden')->orderBy('nombre')->take(4)->get();
+    } catch (\Throwable $e) {
+        $productosDestacados = collect();
+    }
+    return view('home', compact('trabajosDestacados', 'opiniones', 'heroSlides', 'productosDestacados'));
+})->name('home');
+
+// ── Páginas del sitio ─────────────────────────────────────────
+Route::get('/productos', function () {
+    try {
+        $productos = \App\Models\Producto::where('activo', true)->orderBy('orden')->orderBy('nombre')->get();
+    } catch (\Throwable $e) {
+        $productos = collect();
+    }
+    return view('productos', compact('productos'));
+})->name('productos');
+
+Route::get('/productos/{producto}', function (\App\Models\Producto $producto) {
+    if (!$producto->activo) abort(404);
+    try {
+        $relacionados = \App\Models\Producto::where('activo', true)
+            ->where('id', '!=', $producto->id)
+            ->where('categoria', $producto->categoria)
+            ->orderBy('orden')
+            ->take(4)
+            ->get();
+    } catch (\Throwable $e) {
+        $relacionados = collect();
+    }
+    return view('producto-detalle', compact('producto', 'relacionados'));
+})->name('producto.show');
+
+Route::get('/trabajos', [TrabajoController::class, 'index'])->name('trabajos.index');
+
+Route::get('/contacto', fn() => view('contacto'))->name('contacto');
+
+// ── Admin: autenticación ──────────────────────────────────────
+Route::get('/admin/login', [Admin\SessionController::class, 'showLogin'])->name('admin.login');
+Route::post('/admin/login', [Admin\SessionController::class, 'login'])->name('admin.login.post');
+Route::post('/admin/logout', [Admin\SessionController::class, 'logout'])->name('admin.logout');
+
+// ── Admin: CRUD trabajos (protegido) ──────────────────────────
+Route::prefix('admin')->middleware('auth')->name('admin.')->group(function () {
+    Route::get('/', fn() => redirect()->route('admin.trabajos.index'));
+    Route::resource('trabajos', Admin\TrabajoController::class);
+    Route::delete('trabajos/{trabajo}/imagenes/{imagen}', [Admin\TrabajoController::class, 'destroyImagen'])
+         ->name('trabajos.imagenes.destroy');
+
+    // ── Incidencias ──────────────────────────────────────────
+    Route::get('incidencias',                      [AdminIncidenciaController::class, 'index'])  ->name('incidencias.index');
+    Route::get('incidencias/{incidencia}',         [AdminIncidenciaController::class, 'show'])   ->name('incidencias.show');
+    Route::patch('incidencias/{incidencia}/estado',[AdminIncidenciaController::class, 'updateEstado'])->name('incidencias.estado');
+    Route::delete('incidencias/{incidencia}',      [AdminIncidenciaController::class, 'destroy'])->name('incidencias.destroy');
+
+    // ── Opiniones ────────────────────────────────────────────
+    Route::get('opiniones',                     [AdminOpinionController::class, 'index'])   ->name('opiniones.index');
+    Route::patch('opiniones/{opinion}/aprobar', [AdminOpinionController::class, 'aprobar']) ->name('opiniones.aprobar');
+    Route::patch('opiniones/{opinion}/rechazar',[AdminOpinionController::class, 'rechazar'])->name('opiniones.rechazar');
+    Route::delete('opiniones/{opinion}',        [AdminOpinionController::class, 'destroy']) ->name('opiniones.destroy');
+
+    // ── Productos ─────────────────────────────────────────────
+    Route::resource('productos', AdminProductoController::class)->except(['show']);
+    Route::patch('productos/{producto}/toggle-activo',    [AdminProductoController::class, 'toggleActivo'])   ->name('productos.toggleActivo');
+    Route::patch('productos/{producto}/toggle-destacado', [AdminProductoController::class, 'toggleDestacado'])->name('productos.toggleDestacado');
+
+    // ── Hero slides ───────────────────────────────────────────
+    Route::resource('hero', HeroSlideController::class)
+         ->except(['show'])
+         ->parameters(['hero' => 'heroSlide']);
+    Route::patch('hero/{heroSlide}/toggle',  [HeroSlideController::class, 'toggleActivo'])->name('hero.toggle');
+    Route::patch('hero/{heroSlide}/subir',   [HeroSlideController::class, 'moverArriba']) ->name('hero.subir');
+    Route::patch('hero/{heroSlide}/bajar',   [HeroSlideController::class, 'moverAbajo'])  ->name('hero.bajar');
 });
 
-Route::get('/diseño-web-en-toledo', function () {
-    return view('tailwind-landing');
-});
+Route::get('/incidencias', fn() => view('incidencias'))->name('incidencias');
+Route::post('/incidencias', [IncidenciaController::class, 'store'])
+     ->middleware('throttle:5,1')
+     ->name('incidencias.enviar');
 
-Route::get('/original', function () {
-    return view('landing');
-});
+// ── Opiniones ─────────────────────────────────────────────────
+Route::post('/opiniones', [OpinionController::class, 'store'])
+     ->middleware('throttle:5,10')
+     ->name('opiniones.store');
 
-Route::get('/contacto', function () {
-    return view('contacto');
-});
+// ── Páginas legales ───────────────────────────────────────────
+Route::get('/terminos-condiciones', fn() => view('terminos-condiciones'))->name('terminos');
 
-// Páginas legales
-Route::get('/terminos-condiciones', function () {
-    return view('terminos-condiciones');
-});
+Route::get('/politica-privacidad', fn() => view('politica-privacidad'))->name('privacidad');
 
-Route::get('/politica-privacidad', function () {
-    return view('politica-privacidad');
-});
-
-Route::get('/cookies', function () {
-    return view('cookies');
-});
+Route::get('/cookies', fn() => view('cookies'))->name('cookies');
 
 // Rutas de prueba para páginas de error (solo para testing)
 Route::get('/test-errors', function () {

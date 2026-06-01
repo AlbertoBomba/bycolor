@@ -292,8 +292,8 @@
                             "Web que se desarrolla para potenciar la captación de clientes en temporada de caza. Fue un éxito en 2 meses
                             se ocupó del 80% de las cacerías que se realizaron ese año"
                         </p>
-                        <a href="https://clubdetiro-losllanos.es" title="Ver sitio web del Club de Tiro Los Llanos" target="_blank" class="inline-block w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-1 sm:py-2 px-2 sm:px-3 text-xs font-black rounded hover:from-blue-600 hover:to-blue-700 transform hover:scale-105 transition-all text-center">
-                            🌐 VER WEB
+                        <a href="https://clubdetiro-losllanos.es/productos/sueltas/suelta-de-perdices" title="Ver sitio web del Club de Tiro Los Llanos" target="_blank" class="inline-block w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-1 sm:py-2 px-2 sm:px-3 text-xs font-black rounded hover:from-blue-600 hover:to-blue-700 transform hover:scale-105 transition-all text-center">
+                            🌐 Tiradas de perdíz
                         </a>
                     </div>
                 </div>

@@ -1,210 +1,149 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONTACTO - bycolor.es</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
-<body class="bg-white overflow-x-hidden">
-    <!-- Header Navigation -->
-    <div class="absolute top-8 left-8 z-50">
-        <a href="/" class="text-blue-900 font-black text-4xl transform -rotate-12 hover:rotate-0 transition-all glitch">
-            ← VOLVER
-        </a>
+﻿@extends('layouts.site')
+
+@section('title', 'Contacto · Presupuesto de Camisetas Personalizadas | bycolor.es')
+@section('description', 'Pide presupuesto gratuito para camisetas personalizadas en Toledo. Te respondemos en menos de 24 horas. Sin compromiso.')
+@section('canonical', 'https://bycolor.es/contacto')
+
+@push('styles')
+<style>
+    .contact-grid { display:grid; grid-template-columns:1fr; gap:2.5rem; }
+    .contact-card { background:white; border-radius:var(--radius-lg); padding:2.5rem 2rem; box-shadow:var(--shadow-lg); border:1px solid var(--gray-100); }
+    .contact-info { display:flex; flex-direction:column; gap:1.4rem; }
+    .info-item { display:flex; gap:1.1rem; align-items:flex-start; }
+    .info-icon { width:48px; height:48px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0; }
+    .info-item h4 { font-size:.82rem; font-weight:800; text-transform:uppercase; letter-spacing:.1em; color:var(--gray-400); margin-bottom:.2rem; }
+    .info-item p  { font-size:.9rem; font-weight:700; color:var(--navy); line-height:1.5; }
+    .info-item a  { color:var(--coral); font-weight:700; text-decoration:none; font-size:.9rem; }
+    .info-item a:hover { text-decoration:underline; }
+    .wa-banner {
+        background:linear-gradient(135deg,#25D366,#128C7E); border-radius:var(--radius-lg);
+        padding:1.6rem 1.8rem; display:flex; align-items:center; gap:1.1rem; color:white; text-decoration:none;
+        transition:all .25s; box-shadow:0 6px 22px rgba(37,211,102,.3);
+    }
+    .wa-banner:hover { transform:translateY(-3px); box-shadow:0 12px 35px rgba(37,211,102,.45); }
+    .wa-banner .icon { font-size:2rem; flex-shrink:0; }
+    .wa-banner h4 { font-size:.95rem; font-weight:900; margin-bottom:.1rem; }
+    .wa-banner p  { font-size:.78rem; opacity:.85; }
+    @media (min-width:900px) { .contact-grid { grid-template-columns:1fr 1.65fr; } }
+
+    /* ── Overrides: form inside white card ── */
+    .contact-card .form-label { color:var(--gray-600); }
+    .contact-card .form-ctrl  { background:var(--gray-50); border-color:var(--gray-200); color:var(--gray-900); }
+    .contact-card .form-ctrl::placeholder { color:var(--gray-400); }
+    .contact-card .form-ctrl:focus { background:white; }
+    .contact-card select.form-ctrl option { background:white; color:var(--gray-900); }
+    .contact-card .form-error { color:#DC2626; }
+</style>
+@endpush
+
+@section('content')
+
+<section class="page-header">
+    <div class="container" style="position:relative;z-index:1;">
+        <div class="breadcrumb">
+            <a href="{{ route('home') }}">Inicio</a><span>/</span>
+            <span style="color:rgba(255,255,255,.8);">Contacto</span>
+        </div>
+        <h1>Pide tu <span style="color:var(--coral);">presupuesto</span></h1>
+        <p>Sin compromiso. Respuesta garantizada en menos de 24 horas.</p>
     </div>
+</section>
 
-    <!-- Hero Section CONTACTO -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-blue-50 to-white py-32">
-        <!-- Elementos flotantes gigantes -->
-        <div class="absolute top-[-10rem] left-[-10rem] text-brutal font-black text-blue-100 transform rotate-[-30deg] animate-spin-slow opacity-20">
-            @
-        </div>
-        
-        <div class="absolute top-32 right-[-5rem] text-mega font-black text-blue-50 transform rotate-[25deg] opacity-15">
-            MAIL
-        </div>
-        
-        <div class="container mx-auto px-8 relative z-10">
-            <div class="text-center mb-16">
-                <h1 class="text-8xl md:text-ultra font-black text-blue-900 mb-8 transform -skew-x-12 glitch animate-pulse-brutal brutal-shadow">
-                    CONTACTO
-                </h1>
-                <p class="text-4xl text-blue-700 font-black transform rotate-2">
-                    ¡HABLEMOS AHORA!
-                </p>
+<section class="section" style="background:var(--gray-50);">
+    <div class="container">
+        <div class="contact-grid">
+
+            <div class="reveal">
+                <div class="contact-card" style="margin-bottom:1.4rem;">
+                    <h2 style="font-size:1.15rem;font-weight:900;color:var(--navy);margin-bottom:1.6rem;">📍 Información de contacto</h2>
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <div class="info-icon" style="background:rgba(255,87,51,.1);">📧</div>
+                            <div><h4>Email</h4><a href="mailto:att@bycolor.es">att@bycolor.es</a></div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon" style="background:rgba(37,211,102,.1);">📱</div>
+                            <div><h4>WhatsApp / Teléfono</h4><a href="https://wa.me/34600646123">+34 600 646 123</a></div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon" style="background:rgba(255,193,7,.1);">📍</div>
+                            <div><h4>Ubicación</h4><p>Toledo, España</p></div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon" style="background:rgba(26,26,46,.08);">🕐</div>
+                            <div><h4>Horario</h4><p>Lun – Vie: 9:00 – 18:00<br>Sáb: 10:00 – 14:00</p></div>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://wa.me/34600646123?text=Hola!%20Me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n%20sobre%20camisetas%20personalizadas."
+                   class="wa-banner" target="_blank" rel="noopener">
+                    <div class="icon">💬</div>
+                    <div><h4>WhatsApp directo</h4><p>Respuesta inmediata · Sin esperas</p></div>
+                </a>
             </div>
 
-            <!-- FORMULARIO BRUTAL -->
-            <div class="max-w-4xl mx-auto">
-                @if(session('success'))
-                    <div class="bg-green-100 border-4 border-green-500 p-8 mb-12 transform rotate-1">
-                        <p class="text-3xl font-black text-green-800 text-center glitch">
-                            {{ session('success') }}
-                        </p>
+            <div class="reveal delay-2" x-data="contactForm()">
+                <div class="contact-card">
+                    <h2 style="font-size:1.15rem;font-weight:900;color:var(--navy);margin-bottom:1.6rem;">✉️ Formulario de contacto</h2>
+                    <div x-show="message && messageType === 'success'" x-transition class="alert alert-success" role="alert">
+                        ✅ <span x-text="message"></span>
                     </div>
-                @endif
-
-                @if($errors->any())
-                    <div class="bg-red-100 border-4 border-red-500 p-8 mb-12 transform -rotate-1">
-                        <p class="text-2xl font-black text-red-800 text-center">
-                            ¡HAY ERRORES EN EL FORMULARIO!
-                        </p>
-                        <ul class="mt-4 text-red-700 font-bold">
-                            @foreach($errors->all() as $error)
-                                <li class="transform rotate-1">{{ $error }}</li>
-                            @endforeach
-                        </ul>
+                    <div x-show="message && messageType === 'error'" x-transition class="alert alert-error" role="alert">
+                        ❌ <span x-text="message"></span>
                     </div>
-                @endif
-                
-                <form action="/contacto" method="POST" class="space-y-12">
-                    @csrf
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                        <!-- Nombre -->
-                        <div class="transform rotate-1 hover:rotate-0 transition-all">
-                            <label class="block text-3xl font-black text-blue-900 mb-4 transform -rotate-1">
-                                NOMBRE *
-                            </label>
-                            <input type="text" name="nombre" required
-                                   class="w-full p-6 text-2xl font-bold text-blue-900 input-brutal transform -skew-x-1 hover:skew-x-0"
-                                   placeholder="Tu nombre aquí">
+                    @if(session('success'))
+                    <div class="alert alert-success">✅ {{ session('success') }}</div>
+                    @endif
+                    <form id="contactoForm" @submit.prevent="submitForm()" method="POST" action="{{ route('contacto.enviar') }}">
+                        @csrf
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+                            <div>
+                                <label class="form-label" for="nombre">Nombre *</label>
+                                <input type="text" id="nombre" name="nombre" x-model="formData.nombre" class="form-ctrl" placeholder="Tu nombre" required>
+                                <span class="form-error" x-show="errors.nombre" x-text="errors.nombre ? errors.nombre[0] : ''"></span>
+                            </div>
+                            <div>
+                                <label class="form-label" for="email">Email *</label>
+                                <input type="email" id="email" name="email" x-model="formData.email" class="form-ctrl" placeholder="tu@email.com" required>
+                                <span class="form-error" x-show="errors.email" x-text="errors.email ? errors.email[0] : ''"></span>
+                            </div>
                         </div>
-
-                        <!-- Email -->
-                        <div class="transform -rotate-1 hover:rotate-0 transition-all">
-                            <label class="block text-3xl font-black text-blue-900 mb-4 transform rotate-1">
-                                EMAIL *
-                            </label>
-                            <input type="email" name="email" required
-                                   class="w-full p-6 text-2xl font-bold text-blue-900 input-brutal transform skew-x-1 hover:skew-x-0"
-                                   placeholder="tu@email.com">
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+                            <div>
+                                <label class="form-label" for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono" x-model="formData.telefono" class="form-ctrl" placeholder="+34 600 000 000">
+                            </div>
+                            <div>
+                                <label class="form-label" for="paquete">¿Qué necesitas?</label>
+                                <select id="paquete" name="paquete" x-model="formData.paquete" class="form-ctrl">
+                                    <option value="">Selecciona...</option>
+                                    <option value="camisetas">Camisetas personalizadas</option>
+                                    <option value="polos">Polos / uniforme</option>
+                                    <option value="sudaderas">Sudaderas</option>
+                                    <option value="sport">Ropa deportiva</option>
+                                    <option value="evento">Evento especial</option>
+                                    <option value="otro">Otro producto</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-
-                    <!-- Teléfono -->
-                    <div class="transform rotate-1 hover:rotate-0 transition-all">
-                        <label class="block text-3xl font-black text-blue-900 mb-4 transform -rotate-2">
-                            TELÉFONO
-                        </label>
-                        <input type="tel" name="telefono"
-                               class="w-full p-6 text-2xl font-bold text-blue-900 input-brutal transform -skew-x-2 hover:skew-x-0"
-                               placeholder="+34 XXX XXX XXX">
-                    </div>
-
-                    <!-- Tipo de Proyecto -->
-                    <div class="transform -rotate-1 hover:rotate-0 transition-all">
-                        <label class="block text-3xl font-black text-blue-900 mb-4 transform rotate-1">
-                            TIPO DE PROYECTO *
-                        </label>
-                        <select name="tipo_proyecto" required
-                                class="w-full p-6 text-2xl font-bold text-blue-900 input-brutal transform skew-x-1 hover:skew-x-0">
-                            <option value="">Selecciona una opción</option>
-                            <option value="web_corporativa">WEB CORPORATIVA</option>
-                            <option value="ecommerce">E-COMMERCE</option>
-                            <option value="aplicacion_web">APLICACIÓN WEB</option>
-                            <option value="landing_page">LANDING PAGE</option>
-                            <option value="rediseno">REDISEÑO WEB</option>
-                            <option value="otro">OTRO PROYECTO</option>
-                        </select>
-                    </div>
-
-                    <!-- Presupuesto -->
-                    <div class="transform rotate-2 hover:rotate-0 transition-all">
-                        <label class="block text-3xl font-black text-blue-900 mb-4 transform -rotate-1">
-                            PRESUPUESTO
-                        </label>
-                        <select name="presupuesto"
-                                class="w-full p-6 text-2xl font-bold text-blue-900 input-brutal transform -skew-x-1 hover:skew-x-0">
-                            <option value="">¿Cuál es tu presupuesto?</option>
-                            <option value="menos_5k">Menos de 5.000€</option>
-                            <option value="5k_15k">5.000€ - 15.000€</option>
-                            <option value="15k_30k">15.000€ - 30.000€</option>
-                            <option value="mas_30k">Más de 30.000€</option>
-                            <option value="no_definido">Aún no está definido</option>
-                        </select>
-                    </div>
-
-                    <!-- Mensaje -->
-                    <div class="transform -rotate-1 hover:rotate-0 transition-all">
-                        <label class="block text-3xl font-black text-blue-900 mb-4 transform rotate-2">
-                            CUÉNTANOS TU PROYECTO *
-                        </label>
-                        <textarea name="mensaje" rows="8" required
-                                  class="w-full p-6 text-2xl font-bold text-blue-900 input-brutal transform skew-x-1 hover:skew-x-0 resize-none"
-                                  placeholder="Describe tu proyecto, objetivos, ideas... ¡Todo lo que consideres importante!"></textarea>
-                    </div>
-
-                    <!-- Botón Submit BRUTAL -->
-                    <div class="text-center pt-8">
-                        <button type="submit" 
-                                class="bg-blue-900 text-white px-20 py-8 text-4xl font-black transform -rotate-3 hover:rotate-0 hover:scale-110 transition-all duration-300 shadow-2xl hover:shadow-blue-500/50 glitch animate-pulse-brutal">
-                            ENVIAR PROYECTO!
+                        <div style="margin-bottom:1.5rem;">
+                            <label class="form-label" for="mensaje">Mensaje *</label>
+                            <textarea id="mensaje" name="mensaje" x-model="formData.mensaje" class="form-ctrl" placeholder="Cuéntanos: ¿qué quieres, cuántas unidades, para cuándo...?" required></textarea>
+                            <span class="form-error" x-show="errors.mensaje" x-text="errors.mensaje ? errors.mensaje[0] : ''"></span>
+                        </div>
+                        <button type="submit" class="btn-submit" :disabled="loading">
+                            <span x-show="!loading">🚀 Enviar mensaje</span>
+                            <span x-show="loading" style="display:flex;align-items:center;gap:.5rem;justify-content:center;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="animation:spinSlow 1s linear infinite;"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+                                Enviando...
+                            </span>
                         </button>
-                        
-                        <p class="text-blue-600 font-black text-xl mt-8 transform rotate-1">
-                            Respuesta garantizada en menos de 24h
-                        </p>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <!-- Elementos decorativos -->
-        <div class="absolute bottom-16 left-16 text-huge font-black text-blue-100 transform rotate-45 animate-spin-slow">
-            SEND
-        </div>
-        
-        <div class="absolute top-48 left-8 text-giant font-black text-blue-50 transform -rotate-90 opacity-30">
-            24H
-        </div>
-    </section>
-
-    <!-- Información de Contacto -->
-    <section class="py-32 bg-blue-900 relative overflow-hidden">
-        <div class="absolute -top-32 -right-32 text-brutal font-black text-blue-800 opacity-10 transform rotate-45">
-            INFO
-        </div>
-        
-        <div class="container mx-auto px-8 text-center relative z-10">
-            <h2 class="text-6xl font-black text-white mb-16 transform -rotate-2 brutal-shadow">
-                OTRAS FORMAS DE CONTACTO
-            </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="transform rotate-2 hover:rotate-0 transition-all">
-                    <div class="bg-white p-12 shadow-2xl">
-                        <h3 class="text-4xl font-black text-blue-900 mb-4">EMAIL</h3>
-                        <p class="text-2xl text-blue-700 font-bold">hola@bycolor.es</p>
-                    </div>
-                </div>
-                
-                <div class="transform -rotate-1 hover:rotate-0 transition-all">
-                    <div class="bg-blue-100 p-12 shadow-2xl border-4 border-blue-900">
-                        <h3 class="text-4xl font-black text-blue-900 mb-4">TELÉFONO</h3>
-                        <p class="text-2xl text-blue-700 font-bold">+34 XXX XXX XXX</p>
-                    </div>
-                </div>
-                
-                <div class="transform rotate-1 hover:rotate-0 transition-all">
-                    <div class="bg-white p-12 shadow-2xl">
-                        <h3 class="text-4xl font-black text-blue-900 mb-4">HORARIO</h3>
-                        <p class="text-xl text-blue-700 font-bold">Lun-Vie: 9:00-18:00</p>
-                    </div>
+                    </form>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-white py-16 text-center">
-        <div class="text-blue-900 font-black text-4xl transform rotate-1 mb-4 glitch">
-            bycolor.es
         </div>
-        <div class="text-blue-600 font-light text-lg">
-            Tu proyecto nos espera
-        </div>
-    </footer>
-</body>
-</html>
+    </div>
+</section>
+
+@endsection
